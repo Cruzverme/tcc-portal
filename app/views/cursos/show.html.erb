@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @curso.nome %>
+</p>
+
+<p>
+  <strong>Professores:</strong>
+  <%= @curso.professores %>
+</p>
+
+<p>
+  <strong>Alunos:</strong>
+  <%= @curso.alunos %>
+</p>
+
+<p>
+  <strong>Carga horaria:</strong>
+  <%= @curso.carga_horaria %>
+</p>
+
+<p>
+  <strong>Coordenador:</strong>
+  <%= @curso.coordenador %>
+</p>
+
+<%= link_to 'Editar', edit_curso_path(@curso) %> |
+<%= link_to 'Voltar', cursos_path %>

@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: portal_production
-  username: portal
-  password: <%= ENV['PORTAL_DATABASE_PASSWORD'] %>
+  username: root
+  password: root
