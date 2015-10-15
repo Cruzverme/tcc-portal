@@ -1,1 +1,1 @@
-json.extract! @curso, :id, :nome, :professores, :alunos, :carga_horaria, :coordenador, :created_at, :updated_at
+json.extract! @curso, :id, :aluno_id, :professor_id, :coordenador_id, :created_at, :updated_at

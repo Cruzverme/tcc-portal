@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :cursos
+  devise_for :usuarios
+  resources :usuarios
+  resources :cursos
   get 'welcome/index'
 
   get 'welcome/destroy'

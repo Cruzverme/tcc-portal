@@ -3371,3 +3371,871 @@ Started GET "/welcome/index" for 127.0.0.1 at 2015-10-14 23:43:12 -0300
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (1.7ms)
 Completed 200 OK in 207ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (32.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsuarios (20151015163214)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (441.6ms)[0m  [1mCREATE TABLE "usuarios" ("id" serial primary key, "nome" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151015163214"]]
+  [1m[36m (17.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddDeviseToUsuarios (20151015163817)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (157.0ms)[0m  [1mALTER TABLE "usuarios" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (102.9ms)[0m  ALTER TABLE "usuarios" ADD "encrypted_password" character varying DEFAULT '' NOT NULL
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "usuarios" ADD "reset_password_token" character varying[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "usuarios" ADD "reset_password_sent_at" timestamp
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "usuarios" ADD "remember_created_at" timestamp[0m
+  [1m[35m (132.9ms)[0m  ALTER TABLE "usuarios" ADD "sign_in_count" integer DEFAULT 0 NOT NULL
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "usuarios" ADD "current_sign_in_at" timestamp[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "usuarios" ADD "last_sign_in_at" timestamp
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "usuarios" ADD "current_sign_in_ip" inet[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "usuarios" ADD "last_sign_in_ip" inet
+  [1m[36m (37.5ms)[0m  [1mCREATE UNIQUE INDEX  "index_usuarios_on_email" ON "usuarios"  ("email")[0m
+  [1m[35m (41.5ms)[0m  CREATE UNIQUE INDEX  "index_usuarios_on_reset_password_token" ON "usuarios"  ("reset_password_token")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151015163817"]]
+  [1m[35m (19.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cursos'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'usuarios'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2015-10-15 13:42:52 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 1477ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `user_signed_in?' for #<#<Class:0x007fea91192b88>:0x007fea91191cb0>):
+    16: <% end %>
+    17: 
+    18: <p class="navbar-text pull-right">
+    19: <% if user_signed_in? %>
+    20:   Logged in as <strong><%= current_user.email %></strong>.
+    21:   <%= link_to 'Editar perfil', edit_usuario_registration_path, :class => 'navbar-link' %> |
+    22:   <%= link_to "Logout", destroy_usuario_session_path, method: :delete, :class => 'navbar-link'  %>
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___4195466424766810985_70322716453900'
+
+
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.9ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.2ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (71.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2015-10-15 13:43:18 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 165ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-41e8f9d8d5876ed38a54cf0b8372e86a31596afc397614363afb5a7af5ea91c5.css?body=1" for 127.0.0.1 at 2015-10-15 13:43:18 -0300
+
+
+Started GET "/assets/usuarios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-15 13:43:18 -0300
+
+
+Started GET "/assets/usuarios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-15 13:43:18 -0300
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2015-10-15 13:43:25 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 164ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2015-10-15 13:43:29 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (105.3ms)
+Completed 200 OK in 190ms (Views: 160.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/usuarios/password/new" for 127.0.0.1 at 2015-10-15 13:43:42 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2015-10-15 13:43:46 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2015-10-15 13:44:09 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vBgITmFpc1OeEVmQiUWtD8yByBH0KHX+HAPt7wII9FZHho9d05VYzQpN7o/AO5Wvyf3Bl1e9/4Fm7Fwuqatreg==", "usuario"=>{"email"=>"j.rodolfopps@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mUsuario Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = 'j.rodolfopps@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "usuarios" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "j.rodolfopps@gmail.com"], ["encrypted_password", "$2a$10$//E1pxR8rXH89WUhgTqiQ.m2j8E3Phm7Ep2JY4a/hD5./G5CPBI1G"], ["created_at", "2015-10-15 16:44:09.483995"], ["updated_at", "2015-10-15 16:44:09.483995"]]
+  [1m[36m (23.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "usuarios" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "usuarios"."id" = $7[0m  [["last_sign_in_at", "2015-10-15 16:44:09.513578"], ["current_sign_in_at", "2015-10-15 16:44:09.513578"], ["last_sign_in_ip", "127.0.0.1/32"], ["current_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2015-10-15 16:44:09.515538"], ["id", 1]]
+  [1m[35m (16.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 284ms (ActiveRecord: 43.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-15 13:44:09 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x007fea91192b88>:0x007fea7c866348>):
+    17: 
+    18: <p class="navbar-text pull-right">
+    19: <% if usuario_signed_in? %>
+    20:   Logged in as <strong><%= current_user.email %></strong>.
+    21:   <%= link_to 'Editar perfil', edit_usuario_registration_path, :class => 'navbar-link' %> |
+    22:   <%= link_to "Logout", destroy_usuario_session_path, method: :delete, :class => 'navbar-link'  %>
+    23: <% else %>
+  app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___4195466424766810985_70322546305380'
+
+
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.2ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (26.4ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (53.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-15 13:44:27 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 154ms (Views: 59.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/usuarios/edit" for 127.0.0.1 at 2015-10-15 13:45:22 -0300
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 87ms (Views: 83.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-15 13:45:34 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 160ms (Views: 56.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-15 13:46:49 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 169ms (Views: 71.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cursos/index" for 127.0.0.1 at 2015-10-15 13:46:52 -0300
+Processing by CursosController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mCurso Load (23.0ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 66ms (ActiveRecord: 24.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Curso with 'id'=index):
+  app/controllers/cursos_controller.rb:68:in `set_curso'
+
+
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.3ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (24.4ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (51.3ms)
+
+
+Started GET "/cursos/index" for 127.0.0.1 at 2015-10-15 13:46:52 -0300
+Processing by CursosController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Curso with 'id'=index):
+  app/controllers/cursos_controller.rb:68:in `set_curso'
+
+
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.9ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (54.8ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.9ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 13:47:16 -0300
+Processing by CursosController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `authenticate_user!' for #<CursosController:0x007fea7eb67bf8>):
+  activesupport (4.2.4) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:164:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.3ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (24.1ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (51.3ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 13:47:42 -0300
+Processing by CursosController#index as HTML
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.4ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  Rendered cursos/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 95ms (Views: 60.4ms | ActiveRecord: 4.7ms)
+
+
+Started DELETE "/usuarios/sign_out" for 127.0.0.1 at 2015-10-15 13:47:49 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1nq/ksYd1t+jtWiE/8ZOgqPp/Gbamr2JVwE0qI7C9A0t5DiBdOH9QTfp35u2uHYippX14HkPN/Yt7oVpJWFrIQ=="}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-15 13:47:49 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 158ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 13:47:52 -0300
+Processing by CursosController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2015-10-15 13:47:52 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 13:47:58 -0300
+Processing by CursosController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2015-10-15 13:47:58 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 80ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2015-10-15 13:48:24 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 95ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRoleToUsuarios (20151015165629)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (216.5ms)[0m  [1mALTER TABLE "usuarios" ADD "role" integer DEFAULT 0[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151015165629"]]
+  [1m[36m (25.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cursos'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'usuarios'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCursos (20151015171409)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "cursos" ("id" serial primary key, "aluno_id" integer, "professor_id" integer, "coordenador_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::DuplicateTable: ERROR:  relation "cursos" already exists
+: CREATE TABLE "cursos" ("id" serial primary key, "aluno_id" integer, "professor_id" integer, "coordenador_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCursos (20151015171409)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (68.0ms)[0m  [1mCREATE TABLE "cursos" ("id" serial primary key, "aluno_id" integer, "professor_id" integer, "coordenador_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (41.9ms)[0m  CREATE  INDEX  "index_cursos_on_aluno_id" ON "cursos"  ("aluno_id")
+  [1m[36m (41.6ms)[0m  [1mCREATE  INDEX  "index_cursos_on_professor_id" ON "cursos"  ("professor_id")[0m
+  [1m[35m (41.9ms)[0m  CREATE  INDEX  "index_cursos_on_coordenador_id" ON "cursos"  ("coordenador_id")
+  [1m[36m (3.1ms)[0m  [1mALTER TABLE "cursos" ADD CONSTRAINT "fk_rails_22652096c2"
+FOREIGN KEY ("aluno_id")
+  REFERENCES "alunos" ("id")
+[0m
+PG::UndefinedTable: ERROR:  relation "alunos" does not exist
+: ALTER TABLE "cursos" ADD CONSTRAINT "fk_rails_22652096c2"
+FOREIGN KEY ("aluno_id")
+  REFERENCES "alunos" ("id")
+
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCursos (20151015171409)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (114.5ms)[0m  [1mCREATE TABLE "cursos" ("id" serial primary key, "nome" character varying, "carga_horaria" integer, "descricao" text, "aluno_id" integer, "professor_id" integer, "coordenador_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151015171409"]]
+  [1m[36m (46.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cursos'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'usuarios'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2015-10-15 14:31:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 604ms (Views: 545.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/cursos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-15 14:31:54 -0300
+
+
+Started GET "/assets/cursos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-15 14:31:54 -0300
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 14:31:58 -0300
+Processing by CursosController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2015-10-15 14:31:58 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 126ms (Views: 124.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2015-10-15 14:32:05 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 119ms (Views: 116.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2015-10-15 14:32:13 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6l4Cvna4dZc1mFKVgvy05tzTgImAQr3ngi+IZJ+uoo/0FsN6EhK0lTsCde3j3DPqj8UIzjwzkRkyFoDsig9q2w==", "usuario"=>{"email"=>"j.rodolfopps@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUsuario Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = 'j.rodolfopps@gmail.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 239ms (Views: 83.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2015-10-15 14:32:17 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 85ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios/sign_in" for 127.0.0.1 at 2015-10-15 14:32:35 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Egizn3w6apdlQgeDO71+2UXSY+HS9f1t+L/rNvJtXK4MQHJbGJCrlWvYIPtanfnVFsTrpm6E0ZNIhuO+58yU+g==", "usuario"=>{"email"=>"j.rodolfopps@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (2.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["email", "j.rodolfopps@gmail.com"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "usuarios" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "usuarios"."id" = $4[0m  [["current_sign_in_at", "2015-10-15 17:32:35.928550"], ["sign_in_count", 2], ["updated_at", "2015-10-15 17:32:35.930746"], ["id", 1]]
+  [1m[35m (20.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/cursos
+Completed 302 Found in 237ms (ActiveRecord: 24.7ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 14:32:35 -0300
+Processing by CursosController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCurso Load (0.7ms)[0m  SELECT "cursos".* FROM "cursos"
+  Rendered cursos/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 104ms (Views: 66.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/cursos/new" for 127.0.0.1 at 2015-10-15 14:32:48 -0300
+Processing by CursosController#new as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered cursos/_form.html.erb (5.8ms)
+  Rendered cursos/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 86ms (Views: 68.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2015-10-15 14:33:18 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dQPWn9FI40NUheHJdwmfGpWdkljSZaQXfperm10weM4Na9fDLdnT8zuRQK+hbQFetWjyerx4VFrD5Q5xof2o+A==", "curso"=>{"aluno_id"=>"1", "professor_id"=>"1", "coordenador_id"=>"1"}, "commit"=>"Criar Curso"}
+  [1m[35mUsuario Load (0.7ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "cursos" ("aluno_id", "professor_id", "coordenador_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["aluno_id", 1], ["professor_id", 1], ["coordenador_id", 1], ["created_at", "2015-10-15 17:33:18.749407"], ["updated_at", "2015-10-15 17:33:18.749407"]]
+  [1m[36m (69.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/cursos/1
+Completed 302 Found in 92ms (ActiveRecord: 71.9ms)
+
+
+Started GET "/cursos/1" for 127.0.0.1 at 2015-10-15 14:33:18 -0300
+Processing by CursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCurso Load (0.6ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cursos/show.html.erb within layouts/application (110.7ms)
+Completed 200 OK in 205ms (Views: 192.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 14:33:27 -0300
+Processing by CursosController#index as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCurso Load (0.5ms)[0m  SELECT "cursos".* FROM "cursos"
+  [1m[36mUsuario Load (0.9ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cursos/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 85ms (Views: 79.9ms | ActiveRecord: 2.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUsuario Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = 'aluno@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "usuarios" ("nome", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["nome", "Aluno"], ["email", "aluno@gmail.com"], ["encrypted_password", "$2a$10$1GDhpgiOyOB5FWcURJmdjeDHAfhiRZfJXwVk6MHKTyzzcat1nTEHi"], ["created_at", "2015-10-15 17:37:46.892539"], ["updated_at", "2015-10-15 17:37:46.892539"]]
+  [1m[36m (27.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUsuario Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = 'professor@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "usuarios" ("nome", "email", "encrypted_password", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["nome", "Professor"], ["email", "professor@gmail.com"], ["encrypted_password", "$2a$10$iB2rVsA/29ck6HCiljK7Hucy1B6Kwz4adzzk.CtaoEZ8tV9fN9Ubu"], ["role", 1], ["created_at", "2015-10-15 17:37:47.040310"], ["updated_at", "2015-10-15 17:37:47.040310"]]
+  [1m[36m (11.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUsuario Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = 'coordenador@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "usuarios" ("nome", "email", "encrypted_password", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["nome", "Coordenador"], ["email", "coordenador@gmail.com"], ["encrypted_password", "$2a$10$.KsPp8dR3GYDgfWO47E6p.H5DKJDq.FO5mdFAC.O9tRe4NOqO/0S6"], ["role", 2], ["created_at", "2015-10-15 17:37:47.151596"], ["updated_at", "2015-10-15 17:37:47.151596"]]
+  [1m[36m (10.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUsuario Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = 'administrator@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "usuarios" ("nome", "email", "encrypted_password", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["nome", "Administrator"], ["email", "administrator@gmail.com"], ["encrypted_password", "$2a$10$aPX3SQnQI1.l03fJf8kITex85szk6TMicYczbitDGSi4NFkWNlYUq"], ["role", 3], ["created_at", "2015-10-15 17:37:47.264536"], ["updated_at", "2015-10-15 17:37:47.264536"]]
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/cursos/1/edit" for 127.0.0.1 at 2015-10-15 14:38:20 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CursosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCurso Load (0.7ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.8ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered cursos/_form.html.erb (35.5ms)
+  Rendered cursos/edit.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 436ms (Views: 313.1ms | ActiveRecord: 8.1ms)
+
+
+Started PATCH "/cursos/1" for 127.0.0.1 at 2015-10-15 14:38:34 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uhNHdrYvIGabd9iPBBHgajYQdyINK1lz4qB+77wmPwXCe0YqSr4Q1vRjeenSdX4uFuUXAGM2qT5f0tsFQOvvMw==", "curso"=>{"aluno_id"=>"2", "professor_id"=>"3", "coordenador_id"=>"4"}, "commit"=>"Atualizar Curso", "id"=>"1"}
+  [1m[35mCurso Load (3.2ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.6ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "cursos" SET "aluno_id" = $1, "professor_id" = $2, "coordenador_id" = $3, "updated_at" = $4 WHERE "cursos"."id" = $5[0m  [["aluno_id", 2], ["professor_id", 3], ["coordenador_id", 4], ["updated_at", "2015-10-15 17:38:34.531318"], ["id", 1]]
+  [1m[35m (66.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/cursos/1
+Completed 302 Found in 86ms (ActiveRecord: 71.4ms)
+
+
+Started GET "/cursos/1" for 127.0.0.1 at 2015-10-15 14:38:34 -0300
+Processing by CursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered cursos/show.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 110ms (Views: 103.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 14:39:15 -0300
+Processing by CursosController#index as HTML
+  [1m[35mUsuario Load (0.6ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.4ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUsuario Load (3.1ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered cursos/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 142ms (Views: 131.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-10-15 14:39:22 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUsuario Load (0.7ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 120ms (Views: 111.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/usuarios/1/edit" for 127.0.0.1 at 2015-10-15 14:39:26 -0300
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUsuario Load (0.7ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered usuarios/_form.html.erb (4.1ms)
+  Rendered usuarios/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 94ms (Views: 82.4ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/usuarios/1" for 127.0.0.1 at 2015-10-15 14:39:36 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2zzzvFukoXKawJwFbCzvnCtVL6p7StgHKhro8aJUNxLBPKSDf+iNaV/oxbD1C36UFg0nMfw2y2h2s5JOkSA6g==", "usuario"=>{"nome"=>"Rodolfo Aluno"}, "commit"=>"Atualizar Usuario", "id"=>"1"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "usuarios" SET "nome" = $1, "updated_at" = $2 WHERE "usuarios"."id" = $3  [["nome", "Rodolfo Aluno"], ["updated_at", "2015-10-15 17:39:36.398368"], ["id", 1]]
+  [1m[36m (47.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 71ms (ActiveRecord: 49.1ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2015-10-15 14:39:36 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered usuarios/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 88ms (Views: 82.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-10-15 14:39:38 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.7ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 93ms (Views: 88.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/usuarios/5/edit" for 127.0.0.1 at 2015-10-15 14:39:41 -0300
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUsuario Load (0.9ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered usuarios/_form.html.erb (2.2ms)
+  Rendered usuarios/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 72ms (Views: 66.3ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/usuarios/5" for 127.0.0.1 at 2015-10-15 14:39:46 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1XzwIKs/MuaUcFlfcoQLEUK2y6I9Qs11KnyCXFmeCkmtFPF8V64CVvtk+Dmk4JVVYkOrgFNfPTiXDie2pVPafw==", "usuario"=>{"nome"=>"Administrator Geral"}, "commit"=>"Atualizar Usuario", "id"=>"5"}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "usuarios" SET "nome" = $1, "updated_at" = $2 WHERE "usuarios"."id" = $3[0m  [["nome", "Administrator Geral"], ["updated_at", "2015-10-15 17:39:46.577609"], ["id", 5]]
+  [1m[35m (89.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/usuarios/5
+Completed 302 Found in 102ms (ActiveRecord: 91.4ms)
+
+
+Started GET "/usuarios/5" for 127.0.0.1 at 2015-10-15 14:39:46 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered usuarios/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 69ms (Views: 63.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-10-15 14:39:48 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 87ms (Views: 83.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/usuarios/4/edit" for 127.0.0.1 at 2015-10-15 14:39:50 -0300
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered usuarios/_form.html.erb (2.8ms)
+  Rendered usuarios/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 75ms (Views: 69.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/usuarios/4" for 127.0.0.1 at 2015-10-15 14:39:54 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KdxsmL7ZdxDhJkHbXz4CciD3Zn6iG0klIMHeYnHaIuJRtG3EQkhHoI4y4L2JWpw2AAIGXMwGuWids3uIjRfy1A==", "usuario"=>{"nome"=>"Coordenador Curso"}, "commit"=>"Atualizar Usuario", "id"=>"4"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "usuarios" SET "nome" = $1, "updated_at" = $2 WHERE "usuarios"."id" = $3  [["nome", "Coordenador Curso"], ["updated_at", "2015-10-15 17:39:54.827975"], ["id", 4]]
+  [1m[36m (137.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/usuarios/4
+Completed 302 Found in 157ms (ActiveRecord: 139.4ms)
+
+
+Started GET "/usuarios/4" for 127.0.0.1 at 2015-10-15 14:39:54 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered usuarios/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 73ms (Views: 68.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-10-15 14:39:56 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (2.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 96ms (Views: 89.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/usuarios/3/edit" for 127.0.0.1 at 2015-10-15 14:39:59 -0300
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUsuario Load (0.6ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUsuario Load (1.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered usuarios/_form.html.erb (2.8ms)
+  Rendered usuarios/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 79ms (Views: 69.1ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/usuarios/3" for 127.0.0.1 at 2015-10-15 14:40:03 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ej8+HDQaoMjwk7wJa31REzWck5xvvNMOFbXEB9/B3yhqVz9AyIuQeJ+HHW+9Gc9XFWnzvgGhI0Oox2HtIwwPHg==", "usuario"=>{"nome"=>"Professor Disciplina"}, "commit"=>"Atualizar Usuario", "id"=>"3"}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "usuarios" SET "nome" = $1, "updated_at" = $2 WHERE "usuarios"."id" = $3[0m  [["nome", "Professor Disciplina"], ["updated_at", "2015-10-15 17:40:03.757168"], ["id", 3]]
+  [1m[35m (135.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/usuarios/3
+Completed 302 Found in 154ms (ActiveRecord: 137.4ms)
+
+
+Started GET "/usuarios/3" for 127.0.0.1 at 2015-10-15 14:40:03 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered usuarios/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-10-15 14:40:05 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUsuario Load (0.6ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 88ms (Views: 83.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/usuarios/2/edit" for 127.0.0.1 at 2015-10-15 14:40:09 -0300
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered usuarios/_form.html.erb (4.5ms)
+  Rendered usuarios/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 85ms (Views: 80.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/usuarios/2" for 127.0.0.1 at 2015-10-15 14:40:15 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mW7gWhPeXcMXvUZwVe9m/JZ6FdEg4UUj9gX7tvw0ShnhBuEG709tc3ip5xaDi/i4to918078tW5Ld15cAPmaLw==", "usuario"=>{"nome"=>"Aluno Nerd"}, "commit"=>"Atualizar Usuario", "id"=>"2"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "usuarios" SET "nome" = $1, "updated_at" = $2 WHERE "usuarios"."id" = $3  [["nome", "Aluno Nerd"], ["updated_at", "2015-10-15 17:40:15.187165"], ["id", 2]]
+  [1m[36m (58.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 74ms (ActiveRecord: 60.5ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2015-10-15 14:40:15 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered usuarios/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 67ms (Views: 61.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-10-15 14:40:16 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.6ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 109ms (Views: 104.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 14:40:28 -0300
+Processing by CursosController#index as HTML
+  [1m[35mUsuario Load (0.7ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered cursos/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 84ms (Views: 75.8ms | ActiveRecord: 3.0ms)

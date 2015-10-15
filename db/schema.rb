@@ -11,19 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150922233405) do
+ActiveRecord::Schema.define(version: 20151015171409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cursos", force: :cascade do |t|
     t.string   "nome"
-    t.string   "professores"
-    t.string   "alunos"
     t.integer  "carga_horaria"
-    t.string   "coordenador"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.text     "descricao"
+    t.integer  "aluno_id"
+    t.integer  "professor_id"
+    t.integer  "coordenador_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
+
+  create_table "usuarios", force: :cascade do |t|
+    t.string   "nome"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.integer  "role",                   default: 0
+  end
+
+  add_index "usuarios", ["email"], name: "index_usuarios_on_email", unique: true, using: :btree
+  add_index "usuarios", ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true, using: :btree
 
 end

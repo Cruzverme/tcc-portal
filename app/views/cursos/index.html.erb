@@ -5,10 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Professores</th>
-      <th>Alunos</th>
-      <th>Carga horaria</th>
+      <th>Aluno</th>
+      <th>Professor</th>
       <th>Coordenador</th>
       <th colspan="3"></th>
     </tr>
@@ -17,14 +15,12 @@
   <tbody>
     <% @cursos.each do |curso| %>
       <tr>
-        <td><%= curso.nome %></td>
-        <td><%= curso.professores %></td>
-        <td><%= curso.alunos %></td>
-        <td><%= curso.carga_horaria %></td>
-        <td><%= curso.coordenador %></td>
-        <td><%= link_to 'Mostrar', curso %></td>
-        <td><%= link_to 'Editar', edit_curso_path(curso) %></td>
-        <td><%= link_to 'Deletar', curso, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+        <td><%= curso.aluno.nome %></td>
+        <td><%= curso.professor.nome %></td>
+        <td><%= curso.coordenador.nome %></td>
+        <td><%= link_to 'Show', curso %></td>
+        <td><%= link_to 'Edit', edit_curso_path(curso) %></td>
+        <td><%= link_to 'Destroy', curso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,6 +28,4 @@
 
 <br>
 
-<%= link_to 'Novo Curso', new_curso_path %> 
-<%= link_to 'Voltar', controller: 'welcome', action: 'index' %>
-
+<%= link_to 'New Curso', new_curso_path %>

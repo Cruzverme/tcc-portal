@@ -1,5 +1,7 @@
 == README
 
+* Usando devise -> http://guides.railsgirls.com/devise/
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
@@ -26,3 +28,13 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+create_table :cursos do |t|
+      t.string :nome
+      t.string :professores
+      t.string :alunos
+      t.integer :carga_horaria
+      t.string :coordenador
+
+      t.timestamps null: false
+    end
