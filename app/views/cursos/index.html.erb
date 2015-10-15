@@ -5,8 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Aluno</th>
-      <th>Professor</th>
+      <th>Nome</th>
       <th>Coordenador</th>
       <th colspan="3"></th>
     </tr>
@@ -15,8 +14,7 @@
   <tbody>
     <% @cursos.each do |curso| %>
       <tr>
-        <td><%= curso.aluno.nome %></td>
-        <td><%= curso.professor.nome %></td>
+        <td><%= curso.nome %></td>
         <td><%= curso.coordenador.nome %></td>
         <td><%= link_to 'Show', curso %></td>
         <td><%= link_to 'Edit', edit_curso_path(curso) %></td>

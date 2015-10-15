@@ -4239,3 +4239,163 @@ Processing by CursosController#index as HTML
   [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 4]]
   Rendered cursos/index.html.erb within layouts/application (10.1ms)
 Completed 200 OK in 84ms (Views: 75.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 15:55:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CursosController#index as HTML
+  [1m[35mUsuario Load (0.8ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.8ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered cursos/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 473ms (Views: 344.5ms | ActiveRecord: 8.1ms)
+
+
+Started DELETE "/cursos/1" for 127.0.0.1 at 2015-10-15 15:55:43 -0300
+Processing by CursosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/W1yplKNwD9+wx5OAFDWfl97AX9SQ1mR/CkM1FswtJeFBXP6rhzwjxHXvyjWNEg6f45hXTxeqdxBW6k+p/1koQ==", "id"=>"1"}
+  [1m[36mCurso Load (1.4ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUsuario Load (0.7ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "cursos" WHERE "cursos"."id" = $1  [["id", 1]]
+  [1m[36m (57.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/cursos
+Completed 302 Found in 79ms (ActiveRecord: 60.1ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 15:55:43 -0300
+Processing by CursosController#index as HTML
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.4ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  Rendered cursos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 75ms (Views: 70.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cursos/new" for 127.0.0.1 at 2015-10-15 15:55:46 -0300
+Processing by CursosController#new as HTML
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered cursos/_form.html.erb (101.6ms)
+  Rendered cursos/new.html.erb within layouts/application (106.9ms)
+Completed 200 OK in 285ms (Views: 281.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2015-10-15 15:56:01 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"btcMgsCCBHem99z+WHQS2LkAOt/j8xOB/BzlvpSMXqMWvw3ePBM0x8njfZiOEIycmfVa/Y3u48xBbkBUaEGOlQ==", "curso"=>{"nome"=>"Ciencias", "descricao"=>"ciencias", "coordenador_id"=>"1"}, "commit"=>"Criar Curso"}
+  [1m[36mUsuario Load (1.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "cursos" ("nome", "descricao", "coordenador_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Ciencias"], ["descricao", "ciencias"], ["coordenador_id", 1], ["created_at", "2015-10-15 18:56:01.450845"], ["updated_at", "2015-10-15 18:56:01.450845"]]
+  [1m[35m (30.5ms)[0m  COMMIT
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cursos/_form.html.erb (6.9ms)
+  Rendered cursos/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 148ms (Views: 91.9ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 15:56:10 -0300
+Processing by CursosController#index as HTML
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cursos/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 73ms (Views: 68.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cursos/2/edit" for 127.0.0.1 at 2015-10-15 16:00:41 -0300
+Processing by CursosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered cursos/_form.html.erb (4.2ms)
+  Rendered cursos/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 121ms (Views: 79.7ms | ActiveRecord: 5.5ms)
+
+
+Started PATCH "/cursos/2" for 127.0.0.1 at 2015-10-15 16:00:46 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TwwiYbfyDMAJHROioavTOCO0Gwj15iltbZCAGbG8UEw3ZCM9S2M8cGYJssR3z018A0F7Kpv72SDQ4iXzTXGAeg==", "curso"=>{"nome"=>"Ciencias", "descricao"=>"ciencias", "coordenador_id"=>"1"}, "commit"=>"Atualizar Curso", "id"=>"2"}
+  [1m[36mCurso Load (1.0ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUsuario Load (1.8ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (3.0ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cursos/_form.html.erb (5.4ms)
+  Rendered cursos/edit.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 120ms (Views: 100.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 16:02:50 -0300
+Processing by CursosController#index as HTML
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cursos/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 139ms (Views: 100.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/cursos/new" for 127.0.0.1 at 2015-10-15 16:02:54 -0300
+Processing by CursosController#new as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered cursos/_form.html.erb (5.0ms)
+  Rendered cursos/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 76ms (Views: 70.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2015-10-15 16:03:08 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TglIGMeVngyX8r5uzMW2O4m0fV1ckDjhP6qXgbWc5eVUCR8n49myF1La59tV4icztOx1xtvsK45jA+0+hujoQ==", "curso"=>{"nome"=>"Geografia", "descricao"=>"geof", "coordenador_id"=>"1"}, "commit"=>"Criar Curso"}
+  [1m[35mUsuario Load (0.9ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.6ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cursos/_form.html.erb (8.6ms)
+  Rendered cursos/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 107ms (Views: 89.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2015-10-15 16:03:16 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qDTkQRIoZxQUJLnc+Qml2nmNek4XZ+wqfvnk6req+8vQXOUd7rlXpHswGLovbTueWXgabHl6HGfDi0EAS2cr/Q==", "curso"=>{"nome"=>"Geografia", "descricao"=>"geof", "coordenador_id"=>"2"}, "commit"=>"Criar Curso"}
+  [1m[35mUsuario Load (4.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered cursos/_form.html.erb (4.7ms)
+  Rendered cursos/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 98ms (Views: 81.1ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2015-10-15 16:03:18 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+ysUreb28h9vCqAMImFjaKJPRVqHR7CxC0pZILIzH9SDQxXxGmfCrwAeAWr0Bf0sgroleOlaQPy2OPzKTv7P4g==", "curso"=>{"nome"=>"Geografia", "descricao"=>"geof", "coordenador_id"=>"3"}, "commit"=>"Criar Curso"}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered cursos/_form.html.erb (8.1ms)
+  Rendered cursos/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 83ms (Views: 72.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2015-10-15 16:03:23 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8mAhWLascbHlKFRZ/XHCLNaLSQOAIktzPvxUiCPT2NSKCCAESj1BAYo89T8rFVxo9n4pIe4/uz6DjvFi3x4I4g==", "curso"=>{"nome"=>"Geografia", "descricao"=>"geof", "coordenador_id"=>"4"}, "commit"=>"Criar Curso"}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cursos" ("nome", "descricao", "coordenador_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Geografia"], ["descricao", "geof"], ["coordenador_id", 4], ["created_at", "2015-10-15 19:03:23.347120"], ["updated_at", "2015-10-15 19:03:23.347120"]]
+  [1m[35m (85.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/cursos/3
+Completed 302 Found in 110ms (ActiveRecord: 87.3ms)
+
+
+Started GET "/cursos/3" for 127.0.0.1 at 2015-10-15 16:03:23 -0300
+Processing by CursosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered cursos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 65ms (Views: 58.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 16:03:27 -0300
+Processing by CursosController#index as HTML
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered cursos/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 95ms (Views: 91.2ms | ActiveRecord: 1.5ms)

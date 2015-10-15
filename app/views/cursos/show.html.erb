@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Aluno:</strong>
-  <%= @curso.aluno %>
+  <strong>Nome:</strong>
+  <%= @curso.nome %>
 </p>
 
 <p>
-  <strong>Professor:</strong>
-  <%= @curso.professor %>
+  <strong>Descrição:</strong>
+  <%= @curso.descricao %>
 </p>
 
 <p>
   <strong>Coordenador:</strong>
-  <%= @curso.coordenador %>
+  <%= @curso.coordenador.nome %>
 </p>
 
 <%= link_to 'Edit', edit_curso_path(@curso) %> |

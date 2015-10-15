@@ -28,7 +28,7 @@ class CursosController < ApplicationController
     @curso = Curso.new(curso_params)
 
     respond_to do |format|
-      if @curso.save
+      if coordenador? and @curso.save
         format.html { redirect_to @curso, notice: 'Curso was successfully created.' }
         format.json { render :show, status: :created, location: @curso }
       else
@@ -42,9 +42,14 @@ class CursosController < ApplicationController
   # PATCH/PUT /cursos/1.json
   def update
     respond_to do |format|
-      if @curso.update(curso_params)
-        format.html { redirect_to @curso, notice: 'Curso was successfully updated.' }
-        format.json { render :show, status: :ok, location: @curso }
+      if coordenador?
+        if @curso.update(curso_params)
+          format.html { redirect_to @curso, notice: 'Curso was successfully updated.' }
+          format.json { render :show, status: :ok, location: @curso }
+        else
+          format.html { render :edit }
+          format.json { render json: @curso.errors, status: :unprocessable_entity }
+        end
       else
         format.html { render :edit }
         format.json { render json: @curso.errors, status: :unprocessable_entity }
@@ -63,6 +68,15 @@ class CursosController < ApplicationController
   end
 
   private
+    def coordenador?
+      coordenador = Usuario.find(curso_params[:coordenador_id])
+      if coordenador.role == 'coordenador'
+        true
+      else
+        false
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_curso
       @curso = Curso.find(params[:id])
@@ -70,6 +84,6 @@ class CursosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def curso_params
-      params.require(:curso).permit(:aluno_id, :professor_id, :coordenador_id)
+      params.require(:curso).permit(:nome, :descricao, :coordenador_id)
     end
 end
