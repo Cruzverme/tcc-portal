@@ -7,6 +7,12 @@ gem 'rails', '4.2.4'
 gem 'pg'
 
 gem 'devise'
+
+# layout
+gem 'bootstrap-sass'
+gem 'rails_layout'
+# fim layout
+
 gem 'rqrcode'
 
 # Use SCSS for stylesheets
