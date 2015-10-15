@@ -16,16 +16,19 @@ class CursosController < ApplicationController
   # GET /cursos/new
   def new
     @curso = Curso.new
+    authorize @curso
   end
 
   # GET /cursos/1/edit
   def edit
+    authorize @curso
   end
 
   # POST /cursos
   # POST /cursos.json
   def create
     @curso = Curso.new(curso_params)
+    authorize @curso
 
     respond_to do |format|
       if coordenador? and @curso.save
@@ -41,6 +44,7 @@ class CursosController < ApplicationController
   # PATCH/PUT /cursos/1
   # PATCH/PUT /cursos/1.json
   def update
+    authorize @curso
     respond_to do |format|
       if coordenador?
         if @curso.update(curso_params)

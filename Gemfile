@@ -7,6 +7,7 @@ gem 'rails', '4.2.4'
 gem 'pg'
 
 gem 'devise'
+gem 'pundit'
 
 # layout
 gem 'bootstrap-sass'
