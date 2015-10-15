@@ -1,6 +1,6 @@
 class CursosController < ApplicationController
   before_action :set_curso, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_usuario!
+  before_action :authenticate_user!
 
   # GET /cursos
   # GET /cursos.json
@@ -69,7 +69,7 @@ class CursosController < ApplicationController
 
   private
     def coordenador?
-      coordenador = Usuario.find(curso_params[:coordenador_id])
+      coordenador = User.find(curso_params[:coordenador_id])
       if coordenador.role == 'coordenador'
         true
       else
