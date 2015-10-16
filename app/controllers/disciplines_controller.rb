@@ -1,5 +1,6 @@
 class DisciplinesController < ApplicationController
   before_action :set_discipline, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /disciplines
   # GET /disciplines.json
