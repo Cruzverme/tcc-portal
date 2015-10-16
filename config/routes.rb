@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
   resources :registration_courses
   resources :disciplines
-  resources :disciplines
-  resources :disciplines
-  resources :disciplines
-root to: 'welcome#index'
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
   resources :users
   resources :cursos
+
+  root to: 'welcome#index'
 
   get 'welcome/index'
 
