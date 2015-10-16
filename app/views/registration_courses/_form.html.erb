@@ -11,26 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :admission_date %><br>
-    <%= f.date_select :admission_date %>
-  </div>
-  <div class="field">
-    <%= f.label :locked %><br>
-    <%= f.check_box :locked %>
-  </div>
-  <div class="field">
-    <%= f.label :conclusion_date %><br>
-    <%= f.date_select :conclusion_date %>
-  </div>
+  <% if params.has_key?(:id) %>
+    <div class="field">
+      <%= f.label :locked %>
+      <%= f.check_box :locked %>
+    </div>
+  <% end %>
+
   <div class="field">
     <%= f.label :curso_id %><br>
-    <%= f.text_field :curso_id %>
+    <%= f.select :curso_id, Curso.all.collect { |curso| [ curso.nome, curso.id ] }, {prompt: "Selecione um curso"}, :selected => params[:curso_id] %>
   </div>
-  <div class="field">
-    <%= f.label :aluno_id %><br>
-    <%= f.text_field :aluno_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

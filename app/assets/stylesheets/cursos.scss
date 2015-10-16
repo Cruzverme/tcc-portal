@@ -1,3 +1,7 @@
-// Place all the styles related to the Cursos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.btn {
+  background:#d6e9c6;
+}
+
+.btn:focus {
+  outline: none;
+}

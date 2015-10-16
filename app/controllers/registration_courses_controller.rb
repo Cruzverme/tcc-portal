@@ -4,7 +4,9 @@ class RegistrationCoursesController < ApplicationController
   # GET /registration_courses
   # GET /registration_courses.json
   def index
-    @registration_courses = RegistrationCourse.all
+    @registration_courses = RegistrationCourse.all.where(aluno_id: current_user.id)
+
+    puts Time.now.strftime("%m-%d-%Y %H:%M:%S")
   end
 
   # GET /registration_courses/1
@@ -25,14 +27,19 @@ class RegistrationCoursesController < ApplicationController
   # POST /registration_courses.json
   def create
     @registration_course = RegistrationCourse.new(registration_course_params)
+    @registration_course.locked = false
+    @registration_course.admission_date = DateTime.now.to_date#Time.now.strftime("%m-%d-%Y %H:%M:%S")
+    @registration_course.aluno_id = current_user.id
 
     respond_to do |format|
       if @registration_course.save
         format.html { redirect_to @registration_course, notice: 'Registration course was successfully created.' }
-        format.json { render :show, status: :created, location: @registration_course }
+        data_message = { status: true, message: "Você foi matriculado com sucesso no curso.", object: @registration_course}
+        format.json { render json: data_message }
       else
         format.html { render :new }
-        format.json { render json: @registration_course.errors, status: :unprocessable_entity }
+        data_message = { status: false, message: @registration_course.errors, object: @registration_course }
+        format.json  { render :json => data_message }
       end
     end
   end
@@ -41,6 +48,7 @@ class RegistrationCoursesController < ApplicationController
   # PATCH/PUT /registration_courses/1.json
   def update
     respond_to do |format|
+      #@registration_course.conclusion_date = DateTime.now.to_date#Time.now.strftime("%m-%d-%Y %H:%M:%S")
       if @registration_course.update(registration_course_params)
         format.html { redirect_to @registration_course, notice: 'Registration course was successfully updated.' }
         format.json { render :show, status: :ok, location: @registration_course }

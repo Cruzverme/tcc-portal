@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Admission date:</strong>
   <%= @registration_course.admission_date %>
@@ -17,12 +15,12 @@
 
 <p>
   <strong>Curso:</strong>
-  <%= @registration_course.curso %>
+  <%= @registration_course.curso.nome %>
 </p>
 
 <p>
   <strong>Aluno:</strong>
-  <%= @registration_course.aluno %>
+  <%= @registration_course.aluno.nome %>
 </p>
 
 <%= link_to 'Edit', edit_registration_course_path(@registration_course) %> |

@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Nome:</strong>
   <%= @curso.nome %>
@@ -19,6 +17,14 @@
   <strong>Disciplinas:</strong>
   <% @curso.disciplines.each do |discipline| %>
     <p><%= discipline.name %></p>
+  <% end %>
+</p>
+
+<p>
+  <% if current_user.course_exists?(@curso.id) %>
+    <button id="matricular_curso" class="btn" disabled="true" onclick="matricularCurso(<%= @curso.id %>, <%= current_user.id %>);">Matricular-se</button>
+  <% else %>
+    <button id="matricular_curso" class="btn" onclick="matricularCurso(<%= @curso.id %>, <%= current_user.id %>);">Matricular-se</button>
   <% end %>
 </p>
 
