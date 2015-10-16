@@ -1,12 +1,16 @@
 class RegistrationCoursesController < ApplicationController
   before_action :set_registration_course, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /registration_courses
   # GET /registration_courses.json
   def index
-    @registration_courses = RegistrationCourse.all.where(aluno_id: current_user.id)
-
-    puts Time.now.strftime("%m-%d-%Y %H:%M:%S")
+    if current_user != nil
+      @registration_courses = RegistrationCourse.all.where(aluno_id: current_user.id).order(:curso_id)
+    else
+      @registration_courses = RegistrationCourse.all.order(:curso_id)
+    end
+    #puts Time.now.strftime("%m-%d-%Y %H:%M:%S")
   end
 
   # GET /registration_courses/1
@@ -17,23 +21,27 @@ class RegistrationCoursesController < ApplicationController
   # GET /registration_courses/new
   def new
     @registration_course = RegistrationCourse.new
+    authorize @registration_course
   end
 
   # GET /registration_courses/1/edit
   def edit
+    authorize @registration_course
   end
 
   # POST /registration_courses
   # POST /registration_courses.json
   def create
     @registration_course = RegistrationCourse.new(registration_course_params)
+    authorize @registration_course
+
     @registration_course.locked = false
     @registration_course.admission_date = DateTime.now.to_date#Time.now.strftime("%m-%d-%Y %H:%M:%S")
     @registration_course.aluno_id = current_user.id
 
     respond_to do |format|
       if @registration_course.save
-        format.html { redirect_to @registration_course, notice: 'Registration course was successfully created.' }
+        format.html { redirect_to @registration_course, notice: 'Você foi matriculado com sucesso no curso.' }
         data_message = { status: true, message: "Você foi matriculado com sucesso no curso.", object: @registration_course}
         format.json { render json: data_message }
       else
@@ -47,6 +55,7 @@ class RegistrationCoursesController < ApplicationController
   # PATCH/PUT /registration_courses/1
   # PATCH/PUT /registration_courses/1.json
   def update
+    authorize @registration_course
     respond_to do |format|
       #@registration_course.conclusion_date = DateTime.now.to_date#Time.now.strftime("%m-%d-%Y %H:%M:%S")
       if @registration_course.update(registration_course_params)
@@ -62,6 +71,7 @@ class RegistrationCoursesController < ApplicationController
   # DELETE /registration_courses/1
   # DELETE /registration_courses/1.json
   def destroy
+    authorize @registration_course
     @registration_course.destroy
     respond_to do |format|
       format.html { redirect_to registration_courses_url, notice: 'Registration course was successfully destroyed.' }
