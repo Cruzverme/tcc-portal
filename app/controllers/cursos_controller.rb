@@ -31,7 +31,7 @@ class CursosController < ApplicationController
     authorize @curso
 
     respond_to do |format|
-      if coordenador? and @curso.save
+      if @curso.save
         format.html { redirect_to @curso, notice: 'Curso was successfully created.' }
         format.json { render :show, status: :created, location: @curso }
       else
@@ -46,7 +46,7 @@ class CursosController < ApplicationController
   def update
     authorize @curso
     respond_to do |format|
-      if coordenador? and @curso.update(curso_params)
+      if @curso.update(curso_params)
         format.html { redirect_to @curso, notice: 'Curso was successfully updated.' }
         format.json { render :show, status: :ok, location: @curso }
       else
@@ -68,22 +68,6 @@ class CursosController < ApplicationController
   end
 
   private
-    def coordenador?
-      if User.exists?(curso_params[:coordenador_id])
-        coordenador = User.find(curso_params[:coordenador_id])
-        if coordenador.role == 'coordenador'
-          @curso.errors.delete(:coordenador)
-          true
-        else
-          @curso.errors.add(:coordenador, "apenas.")
-          false
-        end
-      else
-        @curso.errors.add(:coordenador, "não existe.")
-        false
-      end
-    end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_curso
       @curso = Curso.find(params[:id])

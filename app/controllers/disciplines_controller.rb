@@ -30,7 +30,7 @@ class DisciplinesController < ApplicationController
     authorize @discipline
 
     respond_to do |format|
-      if professor_ou_coordenador? and @discipline.save
+      if @discipline.save
         format.html { redirect_to @discipline, notice: 'Discipline was successfully created.' }
         format.json { render :show, status: :created, location: @discipline }
       else
@@ -45,7 +45,7 @@ class DisciplinesController < ApplicationController
   def update
     authorize @discipline
     respond_to do |format|
-      if professor_ou_coordenador? and @discipline.update(discipline_params)
+      if @discipline.update(discipline_params)
         format.html { redirect_to @discipline, notice: 'Discipline was successfully updated.' }
         format.json { render :show, status: :ok, location: @discipline }
       else
@@ -67,21 +67,6 @@ class DisciplinesController < ApplicationController
   end
 
   private
-    def professor_ou_coordenador?
-      if User.exists?(discipline_params[:professor_id])
-        user = User.find(discipline_params[:professor_id])
-        if user.role == 'professor' or user.role == 'coordenador'
-          @discipline.errors.delete(:professor)
-          true
-        else
-          @discipline.errors.add(:professor, "ou Coordenador apenas.")
-          false
-        end
-      else
-        @discipline.errors.add(:professor, " não existe.")
-        false
-      end
-    end
     # Use callbacks to share common setup or constraints between actions.
     def set_discipline
       @discipline = Discipline.find(params[:id])

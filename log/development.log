@@ -10356,3 +10356,735 @@ Processing by DisciplinesController#index as HTML
   Rendered layouts/_navigation.html.erb (5.5ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 304ms (Views: 301.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 22:23:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CursosController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCurso Load (0.8ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered cursos/index.html.erb within layouts/application (34.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 593ms (Views: 478.9ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/assets/cursos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/disciplines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/useres.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/application.self-27a424817124a538a1bd8a9038aea5396ae2ca72ec5dbb40fa23fc96e0859767.css?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/framework_and_overrides.self-17b6cb2130e8c69bd624b1af28cf5a78eee3835883701bcec44ce43c31530057.css?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/scaffolds.self-41e8f9d8d5876ed38a54cf0b8372e86a31596afc397614363afb5a7af5ea91c5.css?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/usuarios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:08 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:09 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:09 -0300
+
+
+Started GET "/assets/cursos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:09 -0300
+
+
+Started GET "/assets/disciplines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:09 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:09 -0300
+
+
+Started GET "/assets/usuarios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:09 -0300
+
+
+Started GET "/assets/application.self-120f3cf1cb67bea53c4a2a57336b34ca04b04b55a55c38cf76ce20a147e5eff9.js?body=1" for 127.0.0.1 at 2015-10-15 22:23:09 -0300
+
+
+Started GET "/cursos/new" for 127.0.0.1 at 2015-10-15 22:23:14 -0300
+Processing by CursosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered cursos/_form.html.erb (37.5ms)
+  Rendered cursos/new.html.erb within layouts/application (40.0ms)
+  Rendered layouts/_navigation_links.html.erb (2.0ms)
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 343ms (Views: 336.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2015-10-15 22:23:43 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bR/j3vyjHOqgqbtwya5f/sXifQIkFX5VY5kEkB1tsrKUJH7MmaFBDJ38GTJTlLbwAOBHXjk7c8ixBlqjdqd5Ug==", "curso"=>{"nome"=>"Bacharelado Informação", "coordenador_id"=>"1", "descricao"=>"dewcferw"}, "commit"=>"Criar Curso"}
+  [1m[35mUser Load (10.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered cursos/_form.html.erb (14.4ms)
+  Rendered cursos/new.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 302ms (Views: 248.2ms | ActiveRecord: 11.3ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2015-10-15 22:23:49 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3X/5bWniEfd5BKA2SvqzGXGoFJv7TJuAxC1qzTVBSW0kRGR/DOBMEURRAnTQwFoXtKoux+Zilh0WsjT+XouCjQ==", "curso"=>{"nome"=>"Bacharelado Informação", "coordenador_id"=>"66", "descricao"=>"dewcferw"}, "commit"=>"Criar Curso"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 66]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  Rendered cursos/_form.html.erb (8.7ms)
+  Rendered cursos/new.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 278ms (Views: 263.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2015-10-15 22:23:55 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SiCNtv8yJtAZYoewVL/aMea56xbDA+7nkuG/kXc0Gu6zGxCkmjB7NiQ3JfLOhTM/I7vRSt4t43pAfuGiHP7RDg==", "curso"=>{"nome"=>"Bacharelado Informação", "coordenador_id"=>"3", "descricao"=>"dewcferw"}, "commit"=>"Criar Curso"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "cursos" ("nome", "descricao", "coordenador_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Bacharelado Informação"], ["descricao", "dewcferw"], ["coordenador_id", 3], ["created_at", "2015-10-16 01:23:55.769077"], ["updated_at", "2015-10-16 01:23:55.769077"]]
+  [1m[35m (68.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/cursos/2
+Completed 302 Found in 92ms (ActiveRecord: 71.5ms)
+
+
+Started GET "/cursos/2" for 127.0.0.1 at 2015-10-15 22:23:55 -0300
+Processing by CursosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurso Load (0.4ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDiscipline Load (0.6ms)[0m  SELECT "disciplines".* FROM "disciplines" WHERE "disciplines"."curso_id" = $1  [["curso_id", 2]]
+  Rendered cursos/show.html.erb within layouts/application (26.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 248ms (Views: 239.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/cursos/2/edit" for 127.0.0.1 at 2015-10-15 22:23:59 -0300
+Processing by CursosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurso Load (0.4ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered cursos/_form.html.erb (4.8ms)
+  Rendered cursos/edit.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 243ms (Views: 236.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/cursos/2" for 127.0.0.1 at 2015-10-15 22:24:02 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G4Cj9hgZtEB3XZkpkaVTnN1uAGhhtkuUbWQLdWxrW17iuz7kfRvppkoIO2sLn7qSGGw6NHyYRgm/+1VGB6GQvg==", "curso"=>{"nome"=>"Bacharelado Informação", "coordenador_id"=>"1", "descricao"=>"dewcferw"}, "commit"=>"Atualizar Curso", "id"=>"2"}
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.5ms)[0m  ROLLBACK
+  Rendered cursos/_form.html.erb (6.5ms)
+  Rendered cursos/edit.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 251ms (Views: 227.9ms | ActiveRecord: 4.7ms)
+
+
+Started PATCH "/cursos/2" for 127.0.0.1 at 2015-10-15 22:24:08 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cbaRL2FIO0DLubXZ1V1Ocjpn3GVjKeVpZWBMiAASKbqIjQw9BEpmpvbsF5tPZ6d8/2XmOX4H6PS3/xK7a9jiWg==", "curso"=>{"nome"=>"Bacharelado Informação", "coordenador_id"=>"66", "descricao"=>"dewcferw"}, "commit"=>"Atualizar Curso", "id"=>"2"}
+  [1m[36mCurso Load (8.8ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 66]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered cursos/_form.html.erb (4.7ms)
+  Rendered cursos/edit.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 255ms (Views: 231.7ms | ActiveRecord: 10.5ms)
+
+
+Started PATCH "/cursos/2" for 127.0.0.1 at 2015-10-15 22:24:14 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sXIvind9462VrF0bCEFhQ7rD5OClEHWpXs4+8SJEhc9ISbKYEn++S6j5/1mSe4hNf8HevLg+eDSMUWDCSY5OLw==", "curso"=>{"nome"=>"Bacharelado Informação", "coordenador_id"=>"3", "descricao"=>"dewcferw"}, "commit"=>"Atualizar Curso", "id"=>"2"}
+  [1m[35mCurso Load (0.5ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.8ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/cursos/2
+Completed 302 Found in 29ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/cursos/2" for 127.0.0.1 at 2015-10-15 22:24:14 -0300
+Processing by CursosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCurso Load (0.5ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mDiscipline Load (0.4ms)[0m  [1mSELECT "disciplines".* FROM "disciplines" WHERE "disciplines"."curso_id" = $1[0m  [["curso_id", 2]]
+  Rendered cursos/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 244ms (Views: 237.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/disciplines" for 127.0.0.1 at 2015-10-15 22:28:25 -0300
+Processing by DisciplinesController#index as HTML
+  [1m[35mDiscipline Load (0.5ms)[0m  SELECT "disciplines".* FROM "disciplines"
+  [1m[36mCurso Load (0.4ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered disciplines/index.html.erb within layouts/application (67.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (3.2ms)
+  Rendered layouts/_navigation.html.erb (4.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 304ms (Views: 289.5ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/disciplines/1/edit" for 127.0.0.1 at 2015-10-15 22:29:03 -0300
+Processing by DisciplinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDiscipline Load (0.5ms)[0m  SELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered disciplines/_form.html.erb (10.0ms)
+  Rendered disciplines/edit.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 277ms (Views: 227.4ms | ActiveRecord: 6.9ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:29:07 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4oYFPuZT1O7LwrecL0FJ07fu8ZRFYxjnG8M7E8BeuSEbvZgsg1GJCPaXFd61e6DdcuzLyFhNFXrJXGUgq5RywQ==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"1", "professor_id"=>"", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[35mDiscipline Load (0.6ms)[0m  SELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (5.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCurso Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered disciplines/_form.html.erb (16.3ms)
+  Rendered disciplines/edit.html.erb within layouts/application (24.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 366ms (Views: 324.5ms | ActiveRecord: 9.7ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:29:22 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ymsIy1uskWlucWcUN8cVMPfuFpRQUhbrz2th5RmYvUUzUJXZPq7Mj1MkxVat/fw+MuwsyE18G3Yd9D/WclJ2pQ==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"1", "professor_id"=>"7", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[36mDiscipline Load (0.5ms)[0m  [1mSELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCurso Exists (2.1ms)[0m  SELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered disciplines/_form.html.erb (9.6ms)
+  Rendered disciplines/edit.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 316ms (Views: 279.9ms | ActiveRecord: 4.3ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:29:28 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iPsojzd+Qw9QPOXPHQ13kALJvTSh0XR6tKDPFEbAy2ZxwLWdUnwe6W1pR42HN56ex8uHaLz/eedmP5EnLQoAhg==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"1", "professor_id"=>"7", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[36mDiscipline Load (0.5ms)[0m  [1mSELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCurso Exists (0.6ms)[0m  SELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered disciplines/_form.html.erb (13.8ms)
+  Rendered disciplines/edit.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 263ms (Views: 241.5ms | ActiveRecord: 2.5ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:29:32 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YzjmIRHHtiXOXGeD2N+DbmAPawv48PyiF6+iqoitFF2aA3szdMXrw/MJxcFC5WpgpQ1RV+Xe8T/FMPyZ42ffvQ==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"1", "professor_id"=>"2", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[36mDiscipline Load (0.6ms)[0m  [1mSELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCurso Exists (0.6ms)[0m  SELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/disciplines/1
+Completed 302 Found in 29ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:29:32 -0300
+Processing by DisciplinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDiscipline Load (0.5ms)[0m  SELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.3ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered disciplines/show.html.erb within layouts/application (19.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (2.6ms)
+  Rendered layouts/_navigation.html.erb (3.8ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 261ms (Views: 256.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/disciplines" for 127.0.0.1 at 2015-10-15 22:29:35 -0300
+Processing by DisciplinesController#index as HTML
+  [1m[35mDiscipline Load (0.4ms)[0m  SELECT "disciplines".* FROM "disciplines"
+  [1m[36mCurso Load (2.0ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered disciplines/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (2.6ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 235ms (Views: 230.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/disciplines/1/edit" for 127.0.0.1 at 2015-10-15 22:29:38 -0300
+Processing by DisciplinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDiscipline Load (0.4ms)[0m  SELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered disciplines/_form.html.erb (8.2ms)
+  Rendered disciplines/edit.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 226ms (Views: 221.7ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:29:41 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JkC5yixLoE5cA9bBaz2r+oq9i2rJrNsKnU0EE9F98anfeyTYSUn9qGFWdIPxB0L0T7+xNtSC1pdP0logurc6SQ==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"1", "professor_id"=>"1", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[35mDiscipline Load (0.7ms)[0m  SELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (2.3ms)[0m  BEGIN
+  [1m[36mCurso Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Exists (1.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  Rendered disciplines/_form.html.erb (9.3ms)
+  Rendered disciplines/edit.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 281ms (Views: 249.3ms | ActiveRecord: 7.3ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:30:43 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AKAQFHCIgbp/OO4imJtnPzIYgH78pLb3TFcW3p3UTUv5m40GFYrcXEJtTGACoY4x9xq6IuGKu2qeyEjt9h6Gqw==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"1", "professor_id"=>"", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[36mDiscipline Load (0.4ms)[0m  [1mSELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mCurso Load (0.4ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCurso Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered disciplines/_form.html.erb (12.4ms)
+  Rendered disciplines/edit.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 339ms (Views: 251.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2015-10-15 22:32:31 -0300
+Processing by CursosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCurso Load (0.6ms)[0m  SELECT "cursos".* FROM "cursos"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered cursos/index.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 293ms (Views: 253.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/cursos/1/edit" for 127.0.0.1 at 2015-10-15 22:33:13 -0300
+Processing by CursosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCurso Load (1.2ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered cursos/_form.html.erb (4.0ms)
+  Rendered cursos/edit.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 303ms (Views: 252.9ms | ActiveRecord: 7.6ms)
+
+
+Started PATCH "/cursos/1" for 127.0.0.1 at 2015-10-15 22:33:16 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oCzVZ145ls4Lg0NiofrIP3ebDVovuwsq6xKWppv6+W5ZF0h1OzvLKDbW4SA7wCExspk3BjKVBrc5jciV8DAyjg==", "curso"=>{"nome"=>"Sistemas de Informação", "coordenador_id"=>"", "descricao"=>"fecwfw"}, "commit"=>"Atualizar Curso", "id"=>"1"}
+  [1m[36mCurso Load (0.8ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (3.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered cursos/_form.html.erb (6.7ms)
+  Rendered cursos/edit.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 380ms (Views: 347.7ms | ActiveRecord: 5.4ms)
+
+
+Started PATCH "/cursos/1" for 127.0.0.1 at 2015-10-15 22:33:48 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2XppNyu4wdoYMiNS2jk7gtjpT5/4UUC/nqSTNfF9uy4gQfQlTrqcPCVngRBAA9KMHet1w+V/TSJMO80Gmrdwzg==", "curso"=>{"nome"=>"Sistemas de Informação", "coordenador_id"=>"", "descricao"=>"fecwfw"}, "commit"=>"Atualizar Curso", "id"=>"1"}
+  [1m[36mCurso Load (0.4ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 7.3ms)
+
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  app/models/curso.rb:10:in `coordenador!'
+  app/controllers/cursos_controller.rb:49:in `block in update'
+  app/controllers/cursos_controller.rb:48:in `update'
+
+
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.4ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.4ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (27.2ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (55.0ms)
+
+
+Started PATCH "/cursos/1" for 127.0.0.1 at 2015-10-15 22:35:03 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2XppNyu4wdoYMiNS2jk7gtjpT5/4UUC/nqSTNfF9uy4gQfQlTrqcPCVngRBAA9KMHet1w+V/TSJMO80Gmrdwzg==", "curso"=>{"nome"=>"Sistemas de Informação", "coordenador_id"=>"", "descricao"=>"fecwfw"}, "commit"=>"Atualizar Curso", "id"=>"1"}
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered cursos/_form.html.erb (5.8ms)
+  Rendered cursos/edit.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 364ms (Views: 294.4ms | ActiveRecord: 7.5ms)
+
+
+Started PATCH "/cursos/1" for 127.0.0.1 at 2015-10-15 22:35:07 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XeJwwcS8KQQF2I45ao2wBKgGeRTAEyNTfs1Pnvu2xSek2e3Tob504jiNLHvwt1kKbQRDSN09Ls6sUhGtkHwOxw==", "curso"=>{"nome"=>"Sistemas de Informação", "coordenador_id"=>"", "descricao"=>"fecwfw"}, "commit"=>"Atualizar Curso", "id"=>"1"}
+  [1m[36mCurso Load (0.4ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered cursos/_form.html.erb (11.0ms)
+  Rendered cursos/edit.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 259ms (Views: 241.6ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/cursos/1" for 127.0.0.1 at 2015-10-15 22:35:11 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UMbBMLrB26rtHCl+4MDD5SdeJr4R0aNIYDcZ4FC47VSp/Vwi38OGTNBJizx6+irr4lwc4gz/rtWyqEfTO3ImtA==", "curso"=>{"nome"=>"Sistemas de Informação", "coordenador_id"=>"5", "descricao"=>"fecwfw"}, "commit"=>"Atualizar Curso", "id"=>"1"}
+  [1m[36mCurso Load (0.6ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Exists (1.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered cursos/_form.html.erb (9.3ms)
+  Rendered cursos/edit.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 274ms (Views: 246.2ms | ActiveRecord: 4.9ms)
+
+
+Started PATCH "/cursos/1" for 127.0.0.1 at 2015-10-15 22:36:13 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rRPk4Jfcz89Ds5b55q60brTVNP4QUcy56Bu/ijDPPyBUKHny8t6SKX7mNLt8lF1gcdcOog1/wSQ6hOG5WwX0wA==", "curso"=>{"nome"=>"Sistemas de Informação", "coordenador_id"=>"5", "descricao"=>"fecwfw"}, "commit"=>"Atualizar Curso", "id"=>"1"}
+  [1m[36mCurso Load (0.4ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered cursos/_form.html.erb (6.7ms)
+  Rendered cursos/edit.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 304ms (Views: 243.2ms | ActiveRecord: 7.4ms)
+
+
+Started PATCH "/cursos/1" for 127.0.0.1 at 2015-10-15 22:36:17 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2TbSvmL6g5OVInYPg5gEvkLbJ7lmnY1kkbCft0qehzAgDU+sB/jedah31E0Zou2wh9kd5XuzgPlDL8GEIVRM0A==", "curso"=>{"nome"=>"Sistemas de Informação", "coordenador_id"=>"", "descricao"=>"fecwfw"}, "commit"=>"Atualizar Curso", "id"=>"1"}
+  [1m[35mCurso Load (0.6ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered cursos/_form.html.erb (6.2ms)
+  Rendered cursos/edit.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 248ms (Views: 235.2ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/cursos/1" for 127.0.0.1 at 2015-10-15 22:36:20 -0300
+Processing by CursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3WV6gNtkXxDrggPgzSrgIiJP49kc2DqDSJdm6rzvO5IkXueSvmYC9tbXoaJXEAks503ZhQH2Nx6aCDjZ1yXwcg==", "curso"=>{"nome"=>"Sistemas de Informação", "coordenador_id"=>"1", "descricao"=>"fecwfw"}, "commit"=>"Atualizar Curso", "id"=>"1"}
+  [1m[35mCurso Load (0.4ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (4.9ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered cursos/_form.html.erb (9.8ms)
+  Rendered cursos/edit.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 284ms (Views: 261.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/disciplines" for 127.0.0.1 at 2015-10-15 22:39:49 -0300
+Processing by DisciplinesController#index as HTML
+  [1m[35mDiscipline Load (0.6ms)[0m  SELECT "disciplines".* FROM "disciplines"
+  [1m[36mCurso Load (0.3ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered disciplines/index.html.erb within layouts/application (65.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (2.8ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 291ms (Views: 275.9ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/disciplines/1/edit" for 127.0.0.1 at 2015-10-15 22:39:52 -0300
+Processing by DisciplinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDiscipline Load (0.4ms)[0m  SELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered disciplines/_form.html.erb (8.0ms)
+  Rendered disciplines/edit.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 264ms (Views: 257.5ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:39:59 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CWhqZ0eEQVUvGi2I5gqK1SvsbacBaEsSioZ7eg56/hzwU/d1IoYcsxJPj8p8MGPb7u5X+xxGRo9YGSVJZbA1/A==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"1", "professor_id"=>"", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[35mDiscipline Load (0.9ms)[0m  SELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCurso Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered disciplines/_form.html.erb (10.1ms)
+  Rendered disciplines/edit.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 256ms (Views: 238.4ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:40:04 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M/+k3+SkqUWLauBGF+rM1xMhdB7vladmgcaJqP9FH47KxDnNgab0o7Y/QgSN0CXZ1iNOQvK7qvtTWdeblI/Ubg==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"", "professor_id"=>"", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[36mDiscipline Load (0.4ms)[0m  [1mSELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  Rendered disciplines/_form.html.erb (9.0ms)
+  Rendered disciplines/edit.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 232ms (Views: 217.4ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:40:08 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z2M6GMHh7Wan591l77h7ffl/ZQQU1Wx3nu24G3lZjLCeWKcKpOOwgJqyfyd1gpJzPH1fWAn7YepMcuYoEpNHUA==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"4", "professor_id"=>"", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[36mDiscipline Load (0.4ms)[0m  [1mSELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (1.6ms)[0m  [1mBEGIN[0m
+  [1m[35mCurso Exists (2.6ms)[0m  SELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (3.5ms)[0m  [1mROLLBACK[0m
+  Rendered disciplines/_form.html.erb (12.0ms)
+  Rendered disciplines/edit.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 265ms (Views: 243.6ms | ActiveRecord: 8.6ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:40:12 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vxNNysEgFZ5po9A5DfSRSJ7wa3gnE3FMvDtpg6hwvahGKNDYpCJIeFT2cnuXznhGW/JRJDo9fNFupDeww7p2SA==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"2", "professor_id"=>"", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[35mDiscipline Load (1.3ms)[0m  SELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mCurso Exists (2.3ms)[0m  [1mSELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (4.5ms)[0m  ROLLBACK
+  Rendered disciplines/_form.html.erb (9.9ms)
+  Rendered disciplines/edit.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 275ms (Views: 244.6ms | ActiveRecord: 9.3ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:40:16 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y2bDoa4ZDkHFKlsK+430/MzsyCvnFXt3AscbPVzAvlWaXV6zyxtTp/h/+Uhhtx3yCe7yd/o7durQWEUONwp1tQ==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"2", "professor_id"=>"7", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[36mDiscipline Load (0.6ms)[0m  [1mSELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCurso Exists (2.9ms)[0m  SELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered disciplines/_form.html.erb (8.3ms)
+  Rendered disciplines/edit.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 244ms (Views: 218.6ms | ActiveRecord: 4.9ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:40:19 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nup0YFu0QJbdHK6EerbCcj2weW8cK+99GQiicmL+V7Fn0elyPrYdcOBJDMbgjCt8+LJDMwEF4uDLl/xBCTScUQ==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"2", "professor_id"=>"1", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[36mDiscipline Load (0.4ms)[0m  [1mSELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (3.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mCurso Exists (0.4ms)[0m  SELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (3.4ms)[0m  [1mROLLBACK[0m
+  Rendered disciplines/_form.html.erb (12.3ms)
+  Rendered disciplines/edit.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 273ms (Views: 246.1ms | ActiveRecord: 9.0ms)
+
+
+Started PATCH "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:40:24 -0300
+Processing by DisciplinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UH7lYa/aiLmL4PVzwoY5X0RZwdIjKYem9PWpJWkdy/2pRXhzytjVX7a1VzFYvNBRgVv7jj4HijsmavcWAtcAHQ==", "discipline"=>{"name"=>"Calculo 1", "workload"=>"33", "curso_id"=>"2", "professor_id"=>"3", "ementa"=>"rewqrefefefe", "description"=>"rfewrew", "bibliography"=>"rwrwerew"}, "commit"=>"Atualizar Discipline", "id"=>"1"}
+  [1m[35mDiscipline Load (0.3ms)[0m  SELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCurso Exists (1.5ms)[0m  [1mSELECT  1 AS one FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Exists (2.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSQL (1.3ms)[0m  UPDATE "disciplines" SET "curso_id" = $1, "professor_id" = $2, "updated_at" = $3 WHERE "disciplines"."id" = $4  [["curso_id", 2], ["professor_id", 3], ["updated_at", "2015-10-16 01:40:24.139762"], ["id", 1]]
+  [1m[36m (75.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/disciplines/1
+Completed 302 Found in 108ms (ActiveRecord: 81.8ms)
+
+
+Started GET "/disciplines/1" for 127.0.0.1 at 2015-10-15 22:40:24 -0300
+Processing by DisciplinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDiscipline Load (0.3ms)[0m  SELECT  "disciplines".* FROM "disciplines" WHERE "disciplines"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (1.3ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered disciplines/show.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (2.3ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 235ms (Views: 229.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/disciplines" for 127.0.0.1 at 2015-10-15 22:40:27 -0300
+Processing by DisciplinesController#index as HTML
+  [1m[35mDiscipline Load (0.5ms)[0m  SELECT "disciplines".* FROM "disciplines"
+  [1m[36mCurso Load (0.4ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered disciplines/index.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (18.8ms)
+  Rendered layouts/_navigation.html.erb (20.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 233ms (Views: 229.8ms | ActiveRecord: 1.6ms)
