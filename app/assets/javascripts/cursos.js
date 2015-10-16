@@ -1,4 +1,4 @@
-function matricularCurso(curso_id, aluno_id) {
+function enrollCourse(route, curso_id, aluno_id) {
   if ($("#danger_explanation").length != 0)
     $("#danger_explanation").remove();
   if ($(".alert").length != 0)
@@ -13,7 +13,7 @@ function matricularCurso(curso_id, aluno_id) {
   };
 
   $.ajax({
-    url: '/registration_courses',
+    url: route,
     type: 'POST',
     data: registration_course,
     dataType: 'JSON',
@@ -47,7 +47,7 @@ function matricularCurso(curso_id, aluno_id) {
         $("#error_explanation").remove();
 
       if ($("#danger_explanation").length == 0)
-        $("main").append("<div id=\"danger_explanation\" class=\"alert alert-danger\"><button class=\"close\" aria-hidden=\"true\" data-dismiss=\"alert\" type=\"button\">×</button><div id=\"flash_danger\">Você não tem permição para executar esta ação.</div></div>");
+        $("main").prepend("<div id=\"danger_explanation\" class=\"alert alert-danger\"><button class=\"close\" aria-hidden=\"true\" data-dismiss=\"alert\" type=\"button\">×</button><div id=\"flash_danger\">Você não tem permição para executar esta ação.</div></div>");
       else
         $("#danger_explanation").val("<button class=\"close\" aria-hidden=\"true\" data-dismiss=\"alert\" type=\"button\">×</button><div id=\"flash_danger\">Você não tem permição para executar esta ação.</div>");
     }
@@ -84,4 +84,24 @@ function capitilezeLetterWords(str,force){
     function(firstLetter){
       return firstLetter.toUpperCase();
     });
+}
+
+function showDiscipline(route) {
+  $.ajax({
+    url: route,
+    type: 'GET',
+    dataType: 'JSON',
+    success: function(data) {
+      $("#read_workload").text(data.workload);
+      $("#read_professor").text(data.professor.nome);
+      $("#read_description").text(data.description);
+      $("#read_ementa").text(data.ementa);
+      $("#read_bibliography").text(data.bibliography);
+    },
+    error: function(errors) {
+      console.log("errors", errors);
+    }
+  });
+
+  return false;
 }

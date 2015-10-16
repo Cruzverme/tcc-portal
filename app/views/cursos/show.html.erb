@@ -16,17 +16,32 @@
 <p>
   <strong>Disciplinas:</strong>
   <% @curso.disciplines.each do |discipline| %>
-    <p><%= discipline.name %></p>
+    <a href="javascript: void(0)" onclick="showDiscipline('<%= discipline_path(discipline.id) %>')"><%= discipline.name %></a><br />
   <% end %>
 </p>
 
-<p>
-  <% if current_user.course_exists?(@curso.id) %>
-    <button id="matricular_curso" class="btn" disabled="true" onclick="matricularCurso(<%= @curso.id %>, <%= current_user.id %>);">Matricular-se</button>
-  <% else %>
-    <button id="matricular_curso" class="btn" onclick="matricularCurso(<%= @curso.id %>, <%= current_user.id %>);">Matricular-se</button>
-  <% end %>
-</p>
+<% if current_user != nil %>
+  <p>
+    <% if current_user.course_exists?(@curso.id) %>
+      <button id="matricular_curso" class="btn" disabled="true" onclick="enrollCourse('<%= registration_courses_path %>', <%= @curso.id %>, <%= current_user.id %>);">Matricular-se</button>
+    <% else %>
+      <button id="matricular_curso" class="btn" onclick="enrollCourse('<%= registration_courses_path %>', <%= @curso.id %>, <%= current_user.id %>);">Matricular-se</button>
+    <% end %>
+  </p>
+<% end %>
+
+<div id="read_discipline">
+  <strong>Carga Horaria</strong>
+  <span id="read_workload"></span><br />
+  <strong>Professor</strong>
+  <span id="read_professor"></span><br />
+  <strong>Descrição</strong>
+  <span id="read_description"></span><br />
+  <strong>Ementa</strong>
+  <span id="read_ementa"></span><br />
+  <strong>Bibliografia</strong>
+  <span id="read_bibliography"></span>
+</div>
 
 <%= link_to 'Edit', edit_curso_path(@curso) %> |
 <%= link_to 'Back', cursos_path %>

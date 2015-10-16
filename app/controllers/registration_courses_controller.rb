@@ -5,7 +5,7 @@ class RegistrationCoursesController < ApplicationController
   # GET /registration_courses
   # GET /registration_courses.json
   def index
-    if current_user != nil
+    if current_user != nil && current_user.role == 'aluno'
       @registration_courses = RegistrationCourse.all.where(aluno_id: current_user.id).order(:curso_id)
     else
       @registration_courses = RegistrationCourse.all.order(:curso_id)
