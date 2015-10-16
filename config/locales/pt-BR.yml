@@ -43,8 +43,7 @@ pt-BR:
       signed_out: "Assinado com sucesso."
       already_signed_out: "Assinado com sucesso."
     unlocks:
-      send_instructions: "
-Você receberá um e-mail com instruções sobre como desbloquear a sua conta em poucos minutos."
+      send_instructions: "Você receberá um e-mail com instruções sobre como desbloquear a sua conta em poucos minutos."
       send_paranoid_instructions: "Se a sua conta existe, você receberá um e-mail com instruções sobre como desbloqueá-lo em poucos minutos."
       unlocked: "Sua conta foi desbloqueado com sucesso. Faça login para continuar."
   errors:

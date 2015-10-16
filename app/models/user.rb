@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
 
   belongs_to :curso, :dependent => :destroy
   belongs_to :discipline, :dependent => :destroy
+  has_many :registration_courses, :dependent => :destroy
 end

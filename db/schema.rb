@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151015231902) do
+ActiveRecord::Schema.define(version: 20151016032149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,18 @@ ActiveRecord::Schema.define(version: 20151015231902) do
 
   add_index "disciplines", ["curso_id"], name: "index_disciplines_on_curso_id", using: :btree
 
+  create_table "registration_courses", force: :cascade do |t|
+    t.date     "admission_date"
+    t.boolean  "locked"
+    t.date     "conclusion_date"
+    t.integer  "curso_id"
+    t.integer  "aluno_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "registration_courses", ["curso_id"], name: "index_registration_courses_on_curso_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "nome"
     t.datetime "created_at",                          null: false
@@ -59,4 +71,5 @@ ActiveRecord::Schema.define(version: 20151015231902) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "disciplines", "cursos"
+  add_foreign_key "registration_courses", "cursos"
 end

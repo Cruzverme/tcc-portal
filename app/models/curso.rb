@@ -2,6 +2,7 @@ class Curso < ActiveRecord::Base
   belongs_to :coordenador, :class_name => 'User'
   has_one :users
   has_many :disciplines, :dependent => :destroy
+  has_many :registration_courses, :dependent => :destroy
 
   validate :coordenador!
 
