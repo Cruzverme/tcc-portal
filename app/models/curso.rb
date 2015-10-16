@@ -26,4 +26,13 @@ class Curso < ActiveRecord::Base
       false
     end
   end
+
+  def count_workload
+    workloads = 0.0
+    self.disciplines.each do |discipline|
+      workloads += discipline.workload
+    end
+
+    return workloads
+  end
 end
