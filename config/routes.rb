@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :disciplines
+  resources :disciplines
+  resources :disciplines
+  resources :disciplines
 root to: 'welcome#index'
   devise_for :users
   resources :users

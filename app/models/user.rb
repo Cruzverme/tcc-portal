@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
 
   enum role: [:aluno, :professor, :coordenador, :administrator]
 
-  belongs_to :curso
+  belongs_to :curso, :dependent => :destroy
+  belongs_to :discipline, :dependent => :destroy
 end

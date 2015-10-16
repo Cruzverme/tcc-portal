@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  workload: 1
+  ementa: MyText
+  description: MyText
+  bibliography: MyText
+  curso_id: 
+
+two:
+  name: MyString
+  workload: 1
+  ementa: MyText
+  description: MyText
+  bibliography: MyText
+  curso_id: 

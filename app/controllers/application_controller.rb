@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   private
     def user_not_authorized # PUNDIT: Caso o usuário não tenha permição
-        flash[:notice] = "Você não tem permição" # Essa flash :notice deve ser disponibilizada no layout admin
+        flash[:danger] = "Você não tem permição para executar esta ação." # Essa flash :notice deve ser disponibilizada no layout admin
         redirect_to(request.referrer || root_path) # Redireciona para essa rota.
     end
 end

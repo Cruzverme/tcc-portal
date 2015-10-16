@@ -46,14 +46,9 @@ class CursosController < ApplicationController
   def update
     authorize @curso
     respond_to do |format|
-      if coordenador?
-        if @curso.update(curso_params)
-          format.html { redirect_to @curso, notice: 'Curso was successfully updated.' }
-          format.json { render :show, status: :ok, location: @curso }
-        else
-          format.html { render :edit }
-          format.json { render json: @curso.errors, status: :unprocessable_entity }
-        end
+      if coordenador? and @curso.update(curso_params)
+        format.html { redirect_to @curso, notice: 'Curso was successfully updated.' }
+        format.json { render :show, status: :ok, location: @curso }
       else
         format.html { render :edit }
         format.json { render json: @curso.errors, status: :unprocessable_entity }
@@ -64,6 +59,7 @@ class CursosController < ApplicationController
   # DELETE /cursos/1
   # DELETE /cursos/1.json
   def destroy
+    authorize @curso
     @curso.destroy
     respond_to do |format|
       format.html { redirect_to cursos_url, notice: 'Curso was successfully destroyed.' }
@@ -73,10 +69,17 @@ class CursosController < ApplicationController
 
   private
     def coordenador?
-      coordenador = User.find(curso_params[:coordenador_id])
-      if coordenador.role == 'coordenador'
-        true
+      if User.exists?(curso_params[:coordenador_id])
+        coordenador = User.find(curso_params[:coordenador_id])
+        if coordenador.role == 'coordenador'
+          @curso.errors.delete(:coordenador)
+          true
+        else
+          @curso.errors.add(:coordenador, "apenas.")
+          false
+        end
       else
+        @curso.errors.add(:coordenador, "não existe.")
         false
       end
     end
@@ -88,6 +91,6 @@ class CursosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def curso_params
-      params.require(:curso).permit(:nome, :descricao, :coordenador_id)
+      params.require(:curso).permit(:nome, :descricao, :coordenador_id, :disciplines)
     end
 end

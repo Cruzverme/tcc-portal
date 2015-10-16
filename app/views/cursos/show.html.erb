@@ -15,5 +15,12 @@
   <%= @curso.coordenador.nome %>
 </p>
 
+<p>
+  <strong>Disciplinas:</strong>
+  <% @curso.disciplines.each do |discipline| %>
+    <p><%= discipline.name %></p>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_curso_path(@curso) %> |
 <%= link_to 'Back', cursos_path %>
