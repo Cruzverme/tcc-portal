@@ -8,6 +8,8 @@ gem 'pg'
 
 gem 'devise'
 gem 'pundit'
+# Websocket Rails gem
+gem 'websocket-rails'
 
 # layout
 gem 'bootstrap-sass'

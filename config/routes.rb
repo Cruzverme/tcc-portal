@@ -7,6 +7,12 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
 
+  resources :disciplines do
+    get :arduino
+  end
+
+  #root 'application#show'
+
   get 'welcome/index'
 
   get 'welcome/destroy'

@@ -67,6 +67,13 @@ class DisciplinesController < ApplicationController
     end
   end
 
+  # GET /disciplines/:discipline_id/arduino
+  # GET discipline_arduino_path
+  def arduino
+    @qr = RQRCode::QRCode.new('http://192.168.0.105:3000/disciplines/' + params[:discipline_id].to_s + '/arduino')
+    render '/arduino/show'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_discipline

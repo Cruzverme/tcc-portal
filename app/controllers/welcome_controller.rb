@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @qr = RQRCode::QRCode.new('https://www.google.com')
+    @qr = RQRCode::QRCode.new('http://192.168.0.105:3000/')
   end
 
   def destroy
