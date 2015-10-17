@@ -12,7 +12,7 @@ u2 = User.new(nome: "Leonardo Barroso", email: "professor@gmail.com", password: 
 u2.save!
 u3 = User.new(nome: "Ana Silvia", email: "coordenador@gmail.com", password: 'usuarios', password_confirmation: 'usuarios', role: 2)
 u3.save!
-u4 = User.new(nome: "Administrator do IFF", email: "administrator@gmail.com", password: 'usuarios', password_confirmation: 'usuarios', role: 3)
+u4 = User.new(nome: "Administrator do IFF", email: "administrador@gmail.com", password: 'usuarios', password_confirmation: 'usuarios', role: 3)
 u4.save!
 
 c1 = Curso.new(nome: "Bacharelado em Sistemas de Informação", coordenador_id: u3.id)

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :registration_courses
   resources :disciplines
   devise_for :users, :controllers => { :registrations => :registrations }
-  resources :users
+  resources :users, except: [:create]
   resources :cursos
 
   root to: 'welcome#index'
@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   get 'welcome/edit'
 
   get 'welcome/show'
+
+# Name it however you want
+  post 'create_user' => 'users#create', as: :create_user
+  #patch 'users/:id' => 'users#update', as: :update_user
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

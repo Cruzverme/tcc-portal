@@ -8,7 +8,9 @@ class User < ActiveRecord::Base
 
   belongs_to :curso, :dependent => :destroy
   belongs_to :discipline, :dependent => :destroy
-  has_many :registration_courses, :dependent => :destroy
+  belongs_to :registration_course, :dependent => :destroy
+
+  validates :nome, presence: true
 
   def course_exists?(course_id)
     RegistrationCourse.exists?(curso_id: course_id, aluno_id: self.id)
