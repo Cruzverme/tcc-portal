@@ -2533,3 +2533,1125 @@ I [2015-10-17 01:19:49.208] [[32mChannel[0m] #<Connection::dcf851da2fe066f4075
 I [2015-10-17 01:19:49.212] [[32mConnectionManager[0m] Connection closed: #<Connection::dcf851da2fe066f4075d>
 I [2015-10-17 01:19:49.235] [[32mChannel[0m] #<Connection::923d812a21587de37e79> unsubscribed from channel updates
 I [2015-10-17 01:19:49.238] [[32mConnectionManager[0m] Connection closed: #<Connection::923d812a21587de37e79>
+I [2015-10-18 15:01:47.630] [[32mConnectionManager[0m] Connection opened: #<Connection::e64c6a808709a1f448c8>
+I [2015-10-18 15:01:47.671] [[32mChannel[0m] #<Connection::e64c6a808709a1f448c8> subscribed to channel updates
+I [2015-10-18 15:01:47.671] [[32mChannel[0m] sending token
+I [2015-10-18 15:01:52.389] [[32mDispatcher[0m] Started Event: down
+I [2015-10-18 15:01:52.390] [[32mDispatcher[0m] [36mName:[0m down
+I [2015-10-18 15:01:52.390] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e64c6a808709a1f448c8>
+I [2015-10-18 15:01:52.429] [[32mChannel[0m] [updates] "baixo"
+I [2015-10-18 15:01:52.429] [[32mDispatcher[0m] Event down Finished in 0.039230268 seconds
+I [2015-10-18 15:01:52.958] [[32mDispatcher[0m] Started Event: up
+I [2015-10-18 15:01:52.958] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-18 15:01:52.958] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e64c6a808709a1f448c8>
+I [2015-10-18 15:01:52.959] [[32mChannel[0m] [updates] "cima"
+I [2015-10-18 15:01:52.960] [[32mDispatcher[0m] Event up Finished in 0.001397804 seconds
+I [2015-10-18 15:01:53.438] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:01:53.438] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:01:53.438] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e64c6a808709a1f448c8>
+I [2015-10-18 15:01:53.439] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:01:53.440] [[32mDispatcher[0m] Event right Finished in 0.001560044 seconds
+I [2015-10-18 15:01:53.982] [[32mDispatcher[0m] Started Event: left
+I [2015-10-18 15:01:53.982] [[32mDispatcher[0m] [36mName:[0m left
+I [2015-10-18 15:01:53.982] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e64c6a808709a1f448c8>
+I [2015-10-18 15:01:53.983] [[32mChannel[0m] [updates] "esquerda"
+I [2015-10-18 15:01:53.984] [[32mDispatcher[0m] Event left Finished in 0.001429511 seconds
+I [2015-10-18 15:05:07.945] [[32mChannel[0m] #<Connection::e64c6a808709a1f448c8> unsubscribed from channel updates
+I [2015-10-18 15:05:07.945] [[32mConnectionManager[0m] Connection closed: #<Connection::e64c6a808709a1f448c8>
+I [2015-10-18 15:05:07.946] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:05:07.946] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:05:07.946] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e64c6a808709a1f448c8>
+E [2015-10-18 15:05:08.719] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:05:08.720] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:05:08.721] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:05:08.721] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:05:08.722] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:05:08.723] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:05:08.723] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:05:08.724] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:05:08.725] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:05:08.726] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:05:08.726] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:05:08.727] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:05:08.861] [[32mConnectionManager[0m] Connection opened: #<Connection::16b955e8fa16b3421a6d>
+I [2015-10-18 15:05:08.865] [[32mChannel[0m] #<Connection::16b955e8fa16b3421a6d> subscribed to channel updates
+I [2015-10-18 15:05:08.865] [[32mChannel[0m] sending token
+I [2015-10-18 15:07:12.952] [[32mChannel[0m] #<Connection::16b955e8fa16b3421a6d> unsubscribed from channel updates
+I [2015-10-18 15:07:12.952] [[32mConnectionManager[0m] Connection closed: #<Connection::16b955e8fa16b3421a6d>
+I [2015-10-18 15:07:12.952] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:07:12.953] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:07:12.953] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::16b955e8fa16b3421a6d>
+E [2015-10-18 15:07:12.967] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:07:12.967] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:07:12.967] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:07:12.968] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:07:12.968] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:07:12.970] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:07:12.971] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:07:12.972] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:07:12.973] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:07:12.973] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:07:12.974] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:07:12.974] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:07:13.883] [[32mConnectionManager[0m] Connection opened: #<Connection::fe4c8379edb19a36f69b>
+I [2015-10-18 15:07:13.889] [[32mChannel[0m] #<Connection::fe4c8379edb19a36f69b> subscribed to channel updates
+I [2015-10-18 15:07:13.889] [[32mChannel[0m] sending token
+I [2015-10-18 15:08:56.171] [[32mChannel[0m] #<Connection::fe4c8379edb19a36f69b> unsubscribed from channel updates
+I [2015-10-18 15:08:56.172] [[32mConnectionManager[0m] Connection closed: #<Connection::fe4c8379edb19a36f69b>
+I [2015-10-18 15:08:56.172] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:08:56.172] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:08:56.172] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::fe4c8379edb19a36f69b>
+E [2015-10-18 15:08:56.185] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:08:56.185] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:08:56.185] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:08:56.186] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:08:56.186] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:08:56.186] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:08:56.186] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:08:56.186] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:08:56.186] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:08:56.186] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:08:56.187] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:08:56.187] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:08:57.198] [[32mConnectionManager[0m] Connection opened: #<Connection::c05ce50bdbd12160ac5e>
+I [2015-10-18 15:08:57.204] [[32mChannel[0m] #<Connection::c05ce50bdbd12160ac5e> subscribed to channel updates
+I [2015-10-18 15:08:57.205] [[32mChannel[0m] sending token
+I [2015-10-18 15:09:09.515] [[32mChannel[0m] #<Connection::c05ce50bdbd12160ac5e> unsubscribed from channel updates
+I [2015-10-18 15:09:09.515] [[32mConnectionManager[0m] Connection closed: #<Connection::c05ce50bdbd12160ac5e>
+I [2015-10-18 15:09:09.515] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:09:09.516] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:09:09.516] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::c05ce50bdbd12160ac5e>
+E [2015-10-18 15:09:09.519] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:09:09.519] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:09:09.519] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:09:09.519] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:09:09.519] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:09:09.519] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:09:09.520] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:09:09.520] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:09:09.520] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:09:09.520] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:09:09.520] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:09:09.520] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:09:10.625] [[32mConnectionManager[0m] Connection opened: #<Connection::c59aff0e10101777639f>
+I [2015-10-18 15:09:10.640] [[32mChannel[0m] #<Connection::c59aff0e10101777639f> subscribed to channel updates
+I [2015-10-18 15:09:10.640] [[32mChannel[0m] sending token
+I [2015-10-18 15:13:41.591] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:13:41.591] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:13:41.591] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::c59aff0e10101777639f>
+I [2015-10-18 15:13:41.595] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:13:41.596] [[32mDispatcher[0m] Event right Finished in 0.00499002 seconds
+I [2015-10-18 15:13:42.429] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:13:42.429] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:13:42.429] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::c59aff0e10101777639f>
+I [2015-10-18 15:13:42.430] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:13:42.431] [[32mDispatcher[0m] Event right Finished in 0.001674096 seconds
+I [2015-10-18 15:13:42.651] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:13:42.651] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:13:42.651] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::c59aff0e10101777639f>
+I [2015-10-18 15:13:42.652] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:13:42.653] [[32mDispatcher[0m] Event right Finished in 0.001766286 seconds
+I [2015-10-18 15:13:42.815] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:13:42.815] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:13:42.815] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::c59aff0e10101777639f>
+I [2015-10-18 15:13:42.816] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:13:42.817] [[32mDispatcher[0m] Event right Finished in 0.001751689 seconds
+I [2015-10-18 15:13:43.403] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:13:43.404] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:13:43.404] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::c59aff0e10101777639f>
+I [2015-10-18 15:13:43.413] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:13:43.419] [[32mDispatcher[0m] Event right Finished in 0.001388794 seconds
+I [2015-10-18 15:13:58.798] [[32mConnectionManager[0m] Connection opened: #<Connection::a85506c617191b40e356>
+I [2015-10-18 15:13:58.342] [[32mChannel[0m] #<Connection::a85506c617191b40e356> subscribed to channel updates
+I [2015-10-18 15:13:58.342] [[32mChannel[0m] sending token
+I [2015-10-18 15:14:25.798] [[32mChannel[0m] #<Connection::a85506c617191b40e356> unsubscribed from channel updates
+I [2015-10-18 15:14:25.802] [[32mConnectionManager[0m] Connection closed: #<Connection::a85506c617191b40e356>
+I [2015-10-18 15:14:25.806] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:14:25.807] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:14:25.808] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::a85506c617191b40e356>
+E [2015-10-18 15:14:25.840] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:14:25.841] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:14:25.842] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:14:25.843] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:14:25.843] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:14:25.844] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:14:25.845] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:14:25.845] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:14:25.846] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:14:25.846] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:14:25.847] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:14:25.848] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:14:25.607] [[32mConnectionManager[0m] Connection opened: #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:25.885] [[32mChannel[0m] #<Connection::2a85f9e16d91779cb139> subscribed to channel updates
+I [2015-10-18 15:14:25.886] [[32mChannel[0m] sending token
+I [2015-10-18 15:14:43.172] [[32mDispatcher[0m] Started Event: down
+I [2015-10-18 15:14:43.173] [[32mDispatcher[0m] [36mName:[0m down
+I [2015-10-18 15:14:43.173] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:43.174] [[32mChannel[0m] [updates] "baixo"
+I [2015-10-18 15:14:43.176] [[32mDispatcher[0m] Event down Finished in 0.002722064 seconds
+I [2015-10-18 15:14:43.726] [[32mDispatcher[0m] Started Event: up
+I [2015-10-18 15:14:43.726] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-18 15:14:43.727] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:43.728] [[32mChannel[0m] [updates] "cima"
+I [2015-10-18 15:14:43.730] [[32mDispatcher[0m] Event up Finished in 0.002577074 seconds
+I [2015-10-18 15:14:44.108] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:14:44.109] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:14:44.109] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:44.110] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:14:44.111] [[32mDispatcher[0m] Event right Finished in 0.002052216 seconds
+I [2015-10-18 15:14:44.520] [[32mDispatcher[0m] Started Event: down
+I [2015-10-18 15:14:44.521] [[32mDispatcher[0m] [36mName:[0m down
+I [2015-10-18 15:14:44.521] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:44.522] [[32mChannel[0m] [updates] "baixo"
+I [2015-10-18 15:14:44.523] [[32mDispatcher[0m] Event down Finished in 0.002083994 seconds
+I [2015-10-18 15:14:44.933] [[32mDispatcher[0m] Started Event: up
+I [2015-10-18 15:14:44.933] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-18 15:14:44.933] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:44.934] [[32mChannel[0m] [updates] "cima"
+I [2015-10-18 15:14:44.935] [[32mDispatcher[0m] Event up Finished in 0.001768451 seconds
+I [2015-10-18 15:14:46.205] [[32mDispatcher[0m] Started Event: up
+I [2015-10-18 15:14:46.205] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-18 15:14:46.205] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:46.206] [[32mChannel[0m] [updates] "cima"
+I [2015-10-18 15:14:46.207] [[32mDispatcher[0m] Event up Finished in 0.00181769 seconds
+I [2015-10-18 15:14:46.568] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:14:46.568] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:14:46.568] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:46.569] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:14:46.571] [[32mDispatcher[0m] Event right Finished in 0.002075822 seconds
+I [2015-10-18 15:14:46.951] [[32mDispatcher[0m] Started Event: down
+I [2015-10-18 15:14:46.951] [[32mDispatcher[0m] [36mName:[0m down
+I [2015-10-18 15:14:46.951] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:46.952] [[32mChannel[0m] [updates] "baixo"
+I [2015-10-18 15:14:46.953] [[32mDispatcher[0m] Event down Finished in 0.002121149 seconds
+I [2015-10-18 15:14:48.843] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:14:48.843] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:14:48.843] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:48.844] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:14:48.846] [[32mDispatcher[0m] Event right Finished in 0.002117169 seconds
+I [2015-10-18 15:14:49.248] [[32mDispatcher[0m] Started Event: left
+I [2015-10-18 15:14:49.249] [[32mDispatcher[0m] [36mName:[0m left
+I [2015-10-18 15:14:49.249] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:49.250] [[32mChannel[0m] [updates] "esquerda"
+I [2015-10-18 15:14:49.251] [[32mDispatcher[0m] Event left Finished in 0.002203423 seconds
+I [2015-10-18 15:14:49.731] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:14:49.731] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:14:49.731] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:49.732] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:14:49.733] [[32mDispatcher[0m] Event right Finished in 0.001543073 seconds
+I [2015-10-18 15:14:50.199] [[32mDispatcher[0m] Started Event: up
+I [2015-10-18 15:14:50.201] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-18 15:14:50.202] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:50.214] [[32mChannel[0m] [updates] "cima"
+I [2015-10-18 15:14:50.227] [[32mDispatcher[0m] Event up Finished in 0.002374604 seconds
+I [2015-10-18 15:14:50.319] [[32mDispatcher[0m] Started Event: down
+I [2015-10-18 15:14:50.319] [[32mDispatcher[0m] [36mName:[0m down
+I [2015-10-18 15:14:50.319] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:50.320] [[32mChannel[0m] [updates] "baixo"
+I [2015-10-18 15:14:50.322] [[32mDispatcher[0m] Event down Finished in 0.002281575 seconds
+I [2015-10-18 15:14:50.705] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:14:50.706] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:14:50.706] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:50.707] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:14:50.708] [[32mDispatcher[0m] Event right Finished in 0.002288769 seconds
+I [2015-10-18 15:14:51.661] [[32mDispatcher[0m] Started Event: up
+I [2015-10-18 15:14:51.676] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-18 15:14:51.685] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:51.812] [[32mChannel[0m] [updates] "cima"
+I [2015-10-18 15:14:51.949] [[32mDispatcher[0m] Event up Finished in 0.002456597 seconds
+I [2015-10-18 15:14:51.271] [[32mDispatcher[0m] Started Event: up
+I [2015-10-18 15:14:51.271] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-18 15:14:51.271] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:51.272] [[32mChannel[0m] [updates] "cima"
+I [2015-10-18 15:14:51.273] [[32mDispatcher[0m] Event up Finished in 0.002262368 seconds
+I [2015-10-18 15:14:51.531] [[32mDispatcher[0m] Started Event: up
+I [2015-10-18 15:14:51.531] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-18 15:14:51.531] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:51.532] [[32mChannel[0m] [updates] "cima"
+I [2015-10-18 15:14:51.533] [[32mDispatcher[0m] Event up Finished in 0.001484825 seconds
+I [2015-10-18 15:14:51.820] [[32mDispatcher[0m] Started Event: down
+I [2015-10-18 15:14:51.820] [[32mDispatcher[0m] [36mName:[0m down
+I [2015-10-18 15:14:51.820] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:14:51.821] [[32mChannel[0m] [updates] "baixo"
+I [2015-10-18 15:14:51.823] [[32mDispatcher[0m] Event down Finished in 0.002343245 seconds
+I [2015-10-18 15:14:53.112] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 15:14:53.112] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 15:14:53.112] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::c59aff0e10101777639f>
+I [2015-10-18 15:14:53.113] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 15:14:53.115] [[32mDispatcher[0m] Event right Finished in 0.002126109 seconds
+I [2015-10-18 15:14:55.595] [[32mDispatcher[0m] Started Event: left
+I [2015-10-18 15:14:55.595] [[32mDispatcher[0m] [36mName:[0m left
+I [2015-10-18 15:14:55.595] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::c59aff0e10101777639f>
+I [2015-10-18 15:14:55.596] [[32mChannel[0m] [updates] "esquerda"
+I [2015-10-18 15:14:55.597] [[32mDispatcher[0m] Event left Finished in 0.001996902 seconds
+I [2015-10-18 15:14:57.182] [[32mDispatcher[0m] Started Event: down
+I [2015-10-18 15:14:57.182] [[32mDispatcher[0m] [36mName:[0m down
+I [2015-10-18 15:14:57.182] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::c59aff0e10101777639f>
+I [2015-10-18 15:14:57.183] [[32mChannel[0m] [updates] "baixo"
+I [2015-10-18 15:14:57.185] [[32mDispatcher[0m] Event down Finished in 0.002097474 seconds
+I [2015-10-18 15:16:36.993] [[32mChannel[0m] #<Connection::2a85f9e16d91779cb139> unsubscribed from channel updates
+I [2015-10-18 15:16:36.993] [[32mConnectionManager[0m] Connection closed: #<Connection::2a85f9e16d91779cb139>
+I [2015-10-18 15:16:36.993] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:16:36.993] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:16:36.993] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2a85f9e16d91779cb139>
+E [2015-10-18 15:16:36.996] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:16:36.997] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:16:37.624] [[32mConnectionManager[0m] Connection opened: #<Connection::59f60990400fdc52f976>
+I [2015-10-18 15:16:37.699] [[32mChannel[0m] #<Connection::59f60990400fdc52f976> subscribed to channel updates
+I [2015-10-18 15:16:37.700] [[32mChannel[0m] sending token
+I [2015-10-18 15:18:07.875] [[32mChannel[0m] #<Connection::59f60990400fdc52f976> unsubscribed from channel updates
+I [2015-10-18 15:18:07.877] [[32mConnectionManager[0m] Connection closed: #<Connection::59f60990400fdc52f976>
+I [2015-10-18 15:18:07.880] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:18:07.881] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:18:07.882] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::59f60990400fdc52f976>
+E [2015-10-18 15:18:07.935] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:18:07.937] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:18:07.938] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:18:07.938] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:18:07.939] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:18:07.941] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:18:07.942] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:18:07.942] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:18:07.943] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:18:07.952] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:18:07.953] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:18:07.953] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:18:19.208] [[32mChannel[0m] #<Connection::c59aff0e10101777639f> unsubscribed from channel updates
+I [2015-10-18 15:18:19.208] [[32mConnectionManager[0m] Connection closed: #<Connection::c59aff0e10101777639f>
+I [2015-10-18 15:18:19.208] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:18:19.208] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:18:19.208] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::c59aff0e10101777639f>
+E [2015-10-18 15:18:19.211] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:18:19.212] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:18:20.103] [[32mConnectionManager[0m] Connection opened: #<Connection::2b714348eafa91c97294>
+I [2015-10-18 15:18:20.115] [[32mChannel[0m] #<Connection::2b714348eafa91c97294> subscribed to channel updates
+I [2015-10-18 15:18:20.115] [[32mChannel[0m] sending token
+I [2015-10-18 15:18:29.297] [[32mChannel[0m] #<Connection::2b714348eafa91c97294> unsubscribed from channel updates
+I [2015-10-18 15:18:29.297] [[32mConnectionManager[0m] Connection closed: #<Connection::2b714348eafa91c97294>
+I [2015-10-18 15:18:29.297] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:18:29.298] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:18:29.298] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2b714348eafa91c97294>
+E [2015-10-18 15:18:29.303] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:18:29.304] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:18:29.304] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:18:29.305] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:18:29.305] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:18:29.305] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:18:29.305] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:18:29.305] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:18:29.306] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:18:29.306] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:18:29.306] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:18:29.306] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:18:30.358] [[32mConnectionManager[0m] Connection opened: #<Connection::9729036bd1571d9e8466>
+I [2015-10-18 15:18:30.363] [[32mChannel[0m] #<Connection::9729036bd1571d9e8466> subscribed to channel updates
+I [2015-10-18 15:18:30.363] [[32mChannel[0m] sending token
+I [2015-10-18 15:18:41.731] [[32mChannel[0m] #<Connection::9729036bd1571d9e8466> unsubscribed from channel updates
+I [2015-10-18 15:18:41.731] [[32mConnectionManager[0m] Connection closed: #<Connection::9729036bd1571d9e8466>
+I [2015-10-18 15:18:41.732] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:18:41.732] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:18:41.732] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::9729036bd1571d9e8466>
+E [2015-10-18 15:18:41.735] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:18:41.736] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:25:57.555] [[32mConnectionManager[0m] Connection opened: #<Connection::7f5cc64c47c64f70c3f3>
+I [2015-10-18 15:25:57.564] [[32mChannel[0m] #<Connection::7f5cc64c47c64f70c3f3> subscribed to channel updates
+I [2015-10-18 15:25:57.564] [[32mChannel[0m] sending token
+I [2015-10-18 15:28:45.784] [[32mChannel[0m] #<Connection::7f5cc64c47c64f70c3f3> unsubscribed from channel updates
+I [2015-10-18 15:28:45.784] [[32mConnectionManager[0m] Connection closed: #<Connection::7f5cc64c47c64f70c3f3>
+I [2015-10-18 15:28:45.784] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:28:45.785] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:28:45.785] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::7f5cc64c47c64f70c3f3>
+E [2015-10-18 15:28:45.793] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:28:45.793] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:28:45.793] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:28:45.793] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:28:45.793] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:28:45.793] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:28:45.793] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:28:45.794] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:28:45.794] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:28:45.794] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:28:45.794] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:28:45.794] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:30:18.615] [[32mConnectionManager[0m] Connection opened: #<Connection::af8d7e1874f35d2756e2>
+I [2015-10-18 15:30:18.623] [[32mChannel[0m] #<Connection::af8d7e1874f35d2756e2> subscribed to channel updates
+I [2015-10-18 15:30:18.623] [[32mChannel[0m] sending token
+I [2015-10-18 15:37:40.179] [[32mChannel[0m] #<Connection::af8d7e1874f35d2756e2> unsubscribed from channel updates
+I [2015-10-18 15:37:40.179] [[32mConnectionManager[0m] Connection closed: #<Connection::af8d7e1874f35d2756e2>
+I [2015-10-18 15:37:40.180] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 15:37:40.180] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 15:37:40.180] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::af8d7e1874f35d2756e2>
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 15:37:40.192] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 15:37:40.755] [[32mConnectionManager[0m] Connection opened: #<Connection::e92ef331f3580b7c8293>
+I [2015-10-18 15:37:40.760] [[32mChannel[0m] #<Connection::e92ef331f3580b7c8293> subscribed to channel updates
+I [2015-10-18 15:37:40.760] [[32mChannel[0m] sending token
+I [2015-10-18 16:01:57.829] [[32mChannel[0m] #<Connection::e92ef331f3580b7c8293> unsubscribed from channel updates
+I [2015-10-18 16:01:57.829] [[32mConnectionManager[0m] Connection closed: #<Connection::e92ef331f3580b7c8293>
+I [2015-10-18 16:01:57.829] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:01:57.830] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:01:57.830] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e92ef331f3580b7c8293>
+E [2015-10-18 16:01:57.833] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:01:57.833] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:01:57.833] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:01:57.833] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:01:57.833] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:01:57.834] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:01:57.834] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:01:57.834] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:01:57.834] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:01:57.834] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:01:57.834] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:01:57.835] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:04:01.549] [[32mConnectionManager[0m] Connection opened: #<Connection::bff40482fbf42845911a>
+I [2015-10-18 16:04:01.560] [[32mChannel[0m] #<Connection::bff40482fbf42845911a> subscribed to channel updates
+I [2015-10-18 16:04:01.560] [[32mChannel[0m] sending token
+I [2015-10-18 16:09:06.716] [[32mChannel[0m] #<Connection::bff40482fbf42845911a> unsubscribed from channel updates
+I [2015-10-18 16:09:06.716] [[32mConnectionManager[0m] Connection closed: #<Connection::bff40482fbf42845911a>
+I [2015-10-18 16:09:06.716] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:09:06.716] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:09:06.716] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::bff40482fbf42845911a>
+E [2015-10-18 16:09:06.728] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:09:06.728] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:09:06.728] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:09:06.728] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:09:06.728] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:09:06.728] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:09:06.728] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:09:06.728] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:09:06.729] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:09:06.729] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:09:06.729] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:09:06.729] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:09:07.733] [[32mConnectionManager[0m] Connection opened: #<Connection::2fd9e83ef855a58cbf95>
+I [2015-10-18 16:09:07.760] [[32mChannel[0m] #<Connection::2fd9e83ef855a58cbf95> subscribed to channel updates
+I [2015-10-18 16:09:07.760] [[32mChannel[0m] sending token
+I [2015-10-18 16:10:45.907] [[32mChannel[0m] #<Connection::2fd9e83ef855a58cbf95> unsubscribed from channel updates
+I [2015-10-18 16:10:45.907] [[32mConnectionManager[0m] Connection closed: #<Connection::2fd9e83ef855a58cbf95>
+I [2015-10-18 16:10:45.908] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:10:45.908] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:10:45.908] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2fd9e83ef855a58cbf95>
+E [2015-10-18 16:10:45.917] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:10:45.917] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:10:45.917] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:10:45.917] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:10:45.918] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:10:45.918] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:10:45.918] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:10:45.918] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:10:45.918] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:10:45.918] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:10:45.919] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:10:45.919] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:10:46.486] [[32mConnectionManager[0m] Connection opened: #<Connection::86f8945d1de8f3e42528>
+I [2015-10-18 16:10:46.491] [[32mChannel[0m] #<Connection::86f8945d1de8f3e42528> subscribed to channel updates
+I [2015-10-18 16:10:46.491] [[32mChannel[0m] sending token
+I [2015-10-18 16:12:11.852] [[32mChannel[0m] #<Connection::86f8945d1de8f3e42528> unsubscribed from channel updates
+I [2015-10-18 16:12:11.852] [[32mConnectionManager[0m] Connection closed: #<Connection::86f8945d1de8f3e42528>
+I [2015-10-18 16:12:11.852] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:12:11.852] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:12:11.853] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::86f8945d1de8f3e42528>
+E [2015-10-18 16:12:11.857] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:12:11.857] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:12:11.857] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:12:11.857] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:12:11.857] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:12:11.858] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:12:11.858] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:12:11.858] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:12:11.858] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:12:11.858] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:12:11.859] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:12:11.859] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:12:12.659] [[32mConnectionManager[0m] Connection opened: #<Connection::07f92468dd7453131d8e>
+I [2015-10-18 16:12:12.666] [[32mChannel[0m] #<Connection::07f92468dd7453131d8e> subscribed to channel updates
+I [2015-10-18 16:12:12.666] [[32mChannel[0m] sending token
+I [2015-10-18 16:13:03.362] [[32mChannel[0m] #<Connection::07f92468dd7453131d8e> unsubscribed from channel updates
+I [2015-10-18 16:13:03.362] [[32mConnectionManager[0m] Connection closed: #<Connection::07f92468dd7453131d8e>
+I [2015-10-18 16:13:03.363] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:13:03.363] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:13:03.363] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::07f92468dd7453131d8e>
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:13:03.372] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:13:04.118] [[32mConnectionManager[0m] Connection opened: #<Connection::81847b5bd8bebfda50b6>
+I [2015-10-18 16:13:04.123] [[32mChannel[0m] #<Connection::81847b5bd8bebfda50b6> subscribed to channel updates
+I [2015-10-18 16:13:04.124] [[32mChannel[0m] sending token
+I [2015-10-18 16:13:59.368] [[32mChannel[0m] #<Connection::81847b5bd8bebfda50b6> unsubscribed from channel updates
+I [2015-10-18 16:13:59.368] [[32mConnectionManager[0m] Connection closed: #<Connection::81847b5bd8bebfda50b6>
+I [2015-10-18 16:13:59.368] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:13:59.368] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:13:59.368] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::81847b5bd8bebfda50b6>
+E [2015-10-18 16:13:59.377] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:13:59.377] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:13:59.378] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:13:59.378] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:13:59.378] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:13:59.378] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:13:59.378] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:13:59.379] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:13:59.379] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:13:59.379] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:13:59.379] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:13:59.379] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:14:34.397] [[32mConnectionManager[0m] Connection opened: #<Connection::64722630f7dd515f448f>
+I [2015-10-18 16:14:34.401] [[32mChannel[0m] #<Connection::64722630f7dd515f448f> subscribed to channel updates
+I [2015-10-18 16:14:34.401] [[32mChannel[0m] sending token
+I [2015-10-18 16:15:16.796] [[32mChannel[0m] #<Connection::64722630f7dd515f448f> unsubscribed from channel updates
+I [2015-10-18 16:15:16.796] [[32mConnectionManager[0m] Connection closed: #<Connection::64722630f7dd515f448f>
+I [2015-10-18 16:15:16.796] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:15:16.796] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:15:16.797] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::64722630f7dd515f448f>
+E [2015-10-18 16:15:16.807] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:15:16.807] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:15:16.808] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:15:16.808] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:15:16.808] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:15:16.808] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:15:16.808] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:15:16.808] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:15:16.808] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:15:16.808] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:15:16.808] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:15:16.808] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:15:17.830] [[32mConnectionManager[0m] Connection opened: #<Connection::e0d1771c6f8911ec7fa2>
+I [2015-10-18 16:15:17.837] [[32mChannel[0m] #<Connection::e0d1771c6f8911ec7fa2> subscribed to channel updates
+I [2015-10-18 16:15:17.837] [[32mChannel[0m] sending token
+I [2015-10-18 16:16:16.488] [[32mChannel[0m] #<Connection::e0d1771c6f8911ec7fa2> unsubscribed from channel updates
+I [2015-10-18 16:16:16.488] [[32mConnectionManager[0m] Connection closed: #<Connection::e0d1771c6f8911ec7fa2>
+I [2015-10-18 16:16:16.489] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:16:16.489] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:16:16.489] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e0d1771c6f8911ec7fa2>
+E [2015-10-18 16:16:16.501] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:16:16.505] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:16:16.505] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:16:16.505] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:16:16.505] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:16:16.505] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:16:16.506] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:16:16.507] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:16:16.507] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:16:16.507] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:16:16.507] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:16:16.508] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:16:17.374] [[32mConnectionManager[0m] Connection opened: #<Connection::1fdcadd25941c1a9a652>
+I [2015-10-18 16:16:17.383] [[32mChannel[0m] #<Connection::1fdcadd25941c1a9a652> subscribed to channel updates
+I [2015-10-18 16:16:17.383] [[32mChannel[0m] sending token
+I [2015-10-18 16:17:03.217] [[32mChannel[0m] #<Connection::1fdcadd25941c1a9a652> unsubscribed from channel updates
+I [2015-10-18 16:17:03.218] [[32mConnectionManager[0m] Connection closed: #<Connection::1fdcadd25941c1a9a652>
+I [2015-10-18 16:17:03.218] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:17:03.218] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:17:03.218] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::1fdcadd25941c1a9a652>
+E [2015-10-18 16:17:03.231] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:17:03.232] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:17:04.329] [[32mConnectionManager[0m] Connection opened: #<Connection::8172b588a4f2a18b12c0>
+I [2015-10-18 16:17:04.362] [[32mChannel[0m] #<Connection::8172b588a4f2a18b12c0> subscribed to channel updates
+I [2015-10-18 16:17:04.363] [[32mChannel[0m] sending token
+I [2015-10-18 16:26:38.154] [[32mChannel[0m] #<Connection::8172b588a4f2a18b12c0> unsubscribed from channel updates
+I [2015-10-18 16:26:38.155] [[32mConnectionManager[0m] Connection closed: #<Connection::8172b588a4f2a18b12c0>
+I [2015-10-18 16:26:38.155] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:26:38.155] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:26:38.155] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::8172b588a4f2a18b12c0>
+E [2015-10-18 16:26:38.158] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:26:38.158] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:26:38.159] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:26:38.159] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:26:38.159] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:26:38.159] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:26:38.159] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:26:38.159] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:26:38.159] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:26:38.160] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:26:38.160] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:26:38.160] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:26:39.223] [[32mConnectionManager[0m] Connection opened: #<Connection::4c28eea985949244d2b9>
+I [2015-10-18 16:26:39.257] [[32mChannel[0m] #<Connection::4c28eea985949244d2b9> subscribed to channel updates
+I [2015-10-18 16:26:39.257] [[32mChannel[0m] sending token
+I [2015-10-18 16:27:09.509] [[32mChannel[0m] #<Connection::4c28eea985949244d2b9> unsubscribed from channel updates
+I [2015-10-18 16:27:09.509] [[32mConnectionManager[0m] Connection closed: #<Connection::4c28eea985949244d2b9>
+I [2015-10-18 16:27:09.509] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:27:09.510] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:27:09.510] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::4c28eea985949244d2b9>
+E [2015-10-18 16:27:09.513] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:27:09.514] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:27:09.514] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:27:09.514] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:27:09.514] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:27:09.515] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:27:09.515] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:27:09.515] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:27:09.515] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:27:09.515] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:27:09.516] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:27:09.517] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:27:10.887] [[32mConnectionManager[0m] Connection opened: #<Connection::1aedcdf0ea27ae3dd20a>
+I [2015-10-18 16:27:10.919] [[32mChannel[0m] #<Connection::1aedcdf0ea27ae3dd20a> subscribed to channel updates
+I [2015-10-18 16:27:10.920] [[32mChannel[0m] sending token
+I [2015-10-18 16:27:19.891] [[32mChannel[0m] #<Connection::1aedcdf0ea27ae3dd20a> unsubscribed from channel updates
+I [2015-10-18 16:27:19.892] [[32mConnectionManager[0m] Connection closed: #<Connection::1aedcdf0ea27ae3dd20a>
+I [2015-10-18 16:27:19.892] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:27:19.892] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:27:19.892] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::1aedcdf0ea27ae3dd20a>
+E [2015-10-18 16:27:19.896] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:27:19.896] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:27:19.896] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:27:19.897] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:27:19.897] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:27:19.897] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:27:19.897] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:27:19.897] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:27:19.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:27:19.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:27:19.899] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:27:19.899] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:27:21.388] [[32mConnectionManager[0m] Connection opened: #<Connection::67bf57e5a82da9ffa651>
+I [2015-10-18 16:27:21.417] [[32mChannel[0m] #<Connection::67bf57e5a82da9ffa651> subscribed to channel updates
+I [2015-10-18 16:27:21.417] [[32mChannel[0m] sending token
+I [2015-10-18 16:29:01.166] [[32mChannel[0m] #<Connection::67bf57e5a82da9ffa651> unsubscribed from channel updates
+I [2015-10-18 16:29:01.169] [[32mConnectionManager[0m] Connection closed: #<Connection::67bf57e5a82da9ffa651>
+I [2015-10-18 16:29:01.172] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:29:01.173] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:29:01.174] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::67bf57e5a82da9ffa651>
+E [2015-10-18 16:29:01.299] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:29:01.302] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:29:01.302] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:29:01.303] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:29:01.304] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:29:01.305] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:29:01.306] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:29:01.306] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:29:01.307] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:29:01.308] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:29:01.308] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:29:01.309] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:29:02.250] [[32mConnectionManager[0m] Connection opened: #<Connection::5f5c333c290e7f54f3dd>
+I [2015-10-18 16:29:02.268] [[32mChannel[0m] #<Connection::5f5c333c290e7f54f3dd> subscribed to channel updates
+I [2015-10-18 16:29:02.268] [[32mChannel[0m] sending token
+I [2015-10-18 16:29:05.131] [[32mChannel[0m] #<Connection::5f5c333c290e7f54f3dd> unsubscribed from channel updates
+I [2015-10-18 16:29:05.159] [[32mConnectionManager[0m] Connection closed: #<Connection::5f5c333c290e7f54f3dd>
+I [2015-10-18 16:29:05.190] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:29:05.209] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:29:05.217] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::5f5c333c290e7f54f3dd>
+E [2015-10-18 16:29:05.113] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:29:05.114] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:29:05.115] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:29:05.116] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:29:05.116] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:29:05.117] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:29:05.117] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:29:05.118] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:29:05.118] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:29:05.119] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:29:05.120] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:29:05.120] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:29:05.982] [[32mConnectionManager[0m] Connection opened: #<Connection::e0cc6f7b33ffd0a7441b>
+I [2015-10-18 16:29:06.161] [[32mChannel[0m] #<Connection::e0cc6f7b33ffd0a7441b> subscribed to channel updates
+I [2015-10-18 16:29:06.163] [[32mChannel[0m] sending token
+I [2015-10-18 16:32:18.748] [[32mChannel[0m] #<Connection::e0cc6f7b33ffd0a7441b> unsubscribed from channel updates
+I [2015-10-18 16:32:18.749] [[32mConnectionManager[0m] Connection closed: #<Connection::e0cc6f7b33ffd0a7441b>
+I [2015-10-18 16:32:18.749] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:32:18.749] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:32:18.749] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e0cc6f7b33ffd0a7441b>
+E [2015-10-18 16:32:18.758] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:32:18.759] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:32:18.759] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:32:18.759] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:32:18.759] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:32:18.760] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:32:18.760] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:32:18.760] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:32:18.760] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:32:18.760] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:32:18.760] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:32:18.760] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:32:20.261] [[32mConnectionManager[0m] Connection opened: #<Connection::b5c40ed58be99aa31152>
+I [2015-10-18 16:32:20.287] [[32mChannel[0m] #<Connection::b5c40ed58be99aa31152> subscribed to channel updates
+I [2015-10-18 16:32:20.287] [[32mChannel[0m] sending token
+I [2015-10-18 16:32:29.589] [[32mChannel[0m] #<Connection::b5c40ed58be99aa31152> unsubscribed from channel updates
+I [2015-10-18 16:32:29.589] [[32mConnectionManager[0m] Connection closed: #<Connection::b5c40ed58be99aa31152>
+I [2015-10-18 16:32:29.589] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:32:29.589] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:32:29.589] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::b5c40ed58be99aa31152>
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:32:29.593] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:32:31.177] [[32mConnectionManager[0m] Connection opened: #<Connection::cee66d17e3f1bf7acac1>
+I [2015-10-18 16:32:31.200] [[32mChannel[0m] #<Connection::cee66d17e3f1bf7acac1> subscribed to channel updates
+I [2015-10-18 16:32:31.200] [[32mChannel[0m] sending token
+I [2015-10-18 16:32:39.174] [[32mDispatcher[0m] Started Event: left
+I [2015-10-18 16:32:39.175] [[32mDispatcher[0m] [36mName:[0m left
+I [2015-10-18 16:32:39.175] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::cee66d17e3f1bf7acac1>
+I [2015-10-18 16:32:39.179] [[32mChannel[0m] [updates] "esquerda"
+I [2015-10-18 16:32:39.180] [[32mDispatcher[0m] Event left Finished in 0.004650382 seconds
+I [2015-10-18 16:32:40.477] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 16:32:40.477] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 16:32:40.477] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::cee66d17e3f1bf7acac1>
+I [2015-10-18 16:32:40.478] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 16:32:40.479] [[32mDispatcher[0m] Event right Finished in 0.001524425 seconds
+I [2015-10-18 16:32:41.960] [[32mDispatcher[0m] Started Event: up
+I [2015-10-18 16:32:41.961] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-18 16:32:41.962] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::cee66d17e3f1bf7acac1>
+I [2015-10-18 16:32:41.970] [[32mChannel[0m] [updates] "cima"
+I [2015-10-18 16:32:41.975] [[32mDispatcher[0m] Event up Finished in 0.001084915 seconds
+I [2015-10-18 16:33:21.241] [[32mChannel[0m] #<Connection::cee66d17e3f1bf7acac1> unsubscribed from channel updates
+I [2015-10-18 16:33:21.241] [[32mConnectionManager[0m] Connection closed: #<Connection::cee66d17e3f1bf7acac1>
+I [2015-10-18 16:33:21.241] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:33:21.242] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:33:21.242] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::cee66d17e3f1bf7acac1>
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:33:21.245] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:33:22.456] [[32mConnectionManager[0m] Connection opened: #<Connection::1f10ed3d897ae7765b00>
+I [2015-10-18 16:33:22.477] [[32mChannel[0m] #<Connection::1f10ed3d897ae7765b00> subscribed to channel updates
+I [2015-10-18 16:33:22.477] [[32mChannel[0m] sending token
+I [2015-10-18 16:34:03.132] [[32mChannel[0m] #<Connection::1f10ed3d897ae7765b00> unsubscribed from channel updates
+I [2015-10-18 16:34:03.132] [[32mConnectionManager[0m] Connection closed: #<Connection::1f10ed3d897ae7765b00>
+I [2015-10-18 16:34:03.132] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:34:03.133] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:34:03.133] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::1f10ed3d897ae7765b00>
+E [2015-10-18 16:34:03.145] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:34:03.147] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:34:03.147] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:34:03.147] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:34:03.147] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:34:03.148] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:34:03.148] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:34:03.148] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:34:03.148] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:34:03.148] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:34:03.149] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:34:03.149] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:36:09.675] [[32mConnectionManager[0m] Connection opened: #<Connection::2770bb471953bc4b2fd3>
+I [2015-10-18 16:36:09.697] [[32mChannel[0m] #<Connection::2770bb471953bc4b2fd3> subscribed to channel updates
+I [2015-10-18 16:36:09.697] [[32mChannel[0m] sending token
+I [2015-10-18 16:38:38.208] [[32mChannel[0m] #<Connection::2770bb471953bc4b2fd3> unsubscribed from channel updates
+I [2015-10-18 16:38:38.208] [[32mConnectionManager[0m] Connection closed: #<Connection::2770bb471953bc4b2fd3>
+I [2015-10-18 16:38:38.208] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:38:38.209] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:38:38.209] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::2770bb471953bc4b2fd3>
+E [2015-10-18 16:38:38.217] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:38:38.218] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:38:38.218] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:38:38.218] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:38:38.218] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:38:38.219] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:38:38.219] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:38:38.219] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:38:38.219] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:38:38.219] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:38:38.220] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:38:38.220] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:38:39.536] [[32mConnectionManager[0m] Connection opened: #<Connection::1c25f0f56540faa7551a>
+I [2015-10-18 16:38:39.557] [[32mChannel[0m] #<Connection::1c25f0f56540faa7551a> subscribed to channel updates
+I [2015-10-18 16:38:39.557] [[32mChannel[0m] sending token
+I [2015-10-18 16:40:39.120] [[32mChannel[0m] #<Connection::1c25f0f56540faa7551a> unsubscribed from channel updates
+I [2015-10-18 16:40:39.121] [[32mConnectionManager[0m] Connection closed: #<Connection::1c25f0f56540faa7551a>
+I [2015-10-18 16:40:39.121] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:40:39.121] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:40:39.121] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::1c25f0f56540faa7551a>
+E [2015-10-18 16:40:39.132] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:40:39.132] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:40:39.132] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:40:39.132] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:40:39.132] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:40:39.132] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:40:39.132] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:40:39.132] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:40:39.132] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:40:39.132] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:40:39.133] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:40:39.133] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:40:41.127] [[32mConnectionManager[0m] Connection opened: #<Connection::9e0f03d13c442f375f42>
+I [2015-10-18 16:40:41.153] [[32mChannel[0m] #<Connection::9e0f03d13c442f375f42> subscribed to channel updates
+I [2015-10-18 16:40:41.153] [[32mChannel[0m] sending token
+I [2015-10-18 16:45:30.373] [[32mChannel[0m] #<Connection::9e0f03d13c442f375f42> unsubscribed from channel updates
+I [2015-10-18 16:45:30.373] [[32mConnectionManager[0m] Connection closed: #<Connection::9e0f03d13c442f375f42>
+I [2015-10-18 16:45:30.373] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:45:30.374] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:45:30.374] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::9e0f03d13c442f375f42>
+E [2015-10-18 16:45:30.385] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:45:30.386] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:45:30.386] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:45:30.386] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:45:30.386] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:45:30.386] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:45:30.386] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:45:30.386] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:45:30.386] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:45:30.387] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:45:30.387] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:45:30.387] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:45:31.894] [[32mConnectionManager[0m] Connection opened: #<Connection::97a6ed45b23275ace0d0>
+I [2015-10-18 16:45:31.913] [[32mChannel[0m] #<Connection::97a6ed45b23275ace0d0> subscribed to channel updates
+I [2015-10-18 16:45:31.913] [[32mChannel[0m] sending token
+I [2015-10-18 16:45:42.671] [[32mChannel[0m] #<Connection::97a6ed45b23275ace0d0> unsubscribed from channel updates
+I [2015-10-18 16:45:42.672] [[32mConnectionManager[0m] Connection closed: #<Connection::97a6ed45b23275ace0d0>
+I [2015-10-18 16:45:42.672] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:45:42.672] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:45:42.672] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::97a6ed45b23275ace0d0>
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:45:42.676] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:45:44.278] [[32mConnectionManager[0m] Connection opened: #<Connection::a589c4423b8193b1db1b>
+I [2015-10-18 16:45:44.328] [[32mChannel[0m] #<Connection::a589c4423b8193b1db1b> subscribed to channel updates
+I [2015-10-18 16:45:44.328] [[32mChannel[0m] sending token
+I [2015-10-18 16:46:28.893] [[32mChannel[0m] #<Connection::a589c4423b8193b1db1b> unsubscribed from channel updates
+I [2015-10-18 16:46:28.894] [[32mConnectionManager[0m] Connection closed: #<Connection::a589c4423b8193b1db1b>
+I [2015-10-18 16:46:28.894] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:46:28.894] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:46:28.894] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::a589c4423b8193b1db1b>
+E [2015-10-18 16:46:28.897] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:46:28.897] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 16:46:28.897] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:46:28.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:46:28.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:46:28.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:46:28.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:46:28.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:46:28.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:46:28.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:46:28.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:46:28.898] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 16:46:29.925] [[32mConnectionManager[0m] Connection opened: #<Connection::0a9d644658f589de9682>
+I [2015-10-18 16:46:29.963] [[32mChannel[0m] #<Connection::0a9d644658f589de9682> subscribed to channel updates
+I [2015-10-18 16:46:29.963] [[32mChannel[0m] sending token
+I [2015-10-18 16:51:33.899] [[32mChannel[0m] #<Connection::0a9d644658f589de9682> unsubscribed from channel updates
+I [2015-10-18 16:51:33.900] [[32mConnectionManager[0m] Connection closed: #<Connection::0a9d644658f589de9682>
+I [2015-10-18 16:51:33.900] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 16:51:33.900] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 16:51:33.900] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::0a9d644658f589de9682>
+E [2015-10-18 16:51:33.904] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 16:51:33.904] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:27:in `goodbye'
+E [2015-10-18 16:51:33.904] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 16:51:33.905] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 16:51:33.905] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 16:51:33.905] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 16:51:33.905] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 16:51:33.905] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 16:51:33.905] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 16:51:33.906] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 16:51:33.906] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 16:51:33.908] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 17:01:46.347] [[32mConnectionManager[0m] Connection opened: #<Connection::cb0e1b9ad02a73b255b0>
+W [2015-10-18 17:01:46.371] [[31mDispatcher[0m] EventMap reload failed: uninitialized constant ArduinoWebsocketController
+I [2015-10-18 17:01:46.503] [[32mChannel[0m] #<Connection::cb0e1b9ad02a73b255b0> subscribed to channel updates
+I [2015-10-18 17:01:46.507] [[32mChannel[0m] sending token
+W [2015-10-18 17:01:48.287] [[31mDispatcher[0m] EventMap reload failed: uninitialized constant ArduinoWebsocketController
+I [2015-10-18 17:01:48.287] [[32mDispatcher[0m] Started Event: left
+I [2015-10-18 17:01:48.287] [[32mDispatcher[0m] [36mName:[0m left
+I [2015-10-18 17:01:48.288] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::cb0e1b9ad02a73b255b0>
+I [2015-10-18 17:01:48.297] [[32mChannel[0m] [updates] "esquerda"
+I [2015-10-18 17:01:48.298] [[32mDispatcher[0m] Event left Finished in 0.01038491 seconds
+W [2015-10-18 17:01:49.659] [[31mDispatcher[0m] EventMap reload failed: uninitialized constant ArduinoWebsocketController
+I [2015-10-18 17:01:49.662] [[32mDispatcher[0m] Started Event: right
+I [2015-10-18 17:01:49.664] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-18 17:01:49.664] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::cb0e1b9ad02a73b255b0>
+I [2015-10-18 17:01:49.675] [[32mChannel[0m] [updates] "direita"
+I [2015-10-18 17:01:49.680] [[32mDispatcher[0m] Event right Finished in 0.001322654 seconds
+W [2015-10-18 17:01:49.510] [[31mDispatcher[0m] EventMap reload failed: uninitialized constant ArduinoWebsocketController
+I [2015-10-18 17:01:49.510] [[32mDispatcher[0m] Started Event: up
+I [2015-10-18 17:01:49.510] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-18 17:01:49.511] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::cb0e1b9ad02a73b255b0>
+I [2015-10-18 17:01:49.511] [[32mChannel[0m] [updates] "cima"
+I [2015-10-18 17:01:49.512] [[32mDispatcher[0m] Event up Finished in 0.001384743 seconds
+W [2015-10-18 17:01:50.167] [[31mDispatcher[0m] EventMap reload failed: uninitialized constant ArduinoWebsocketController
+I [2015-10-18 17:01:50.168] [[32mDispatcher[0m] Started Event: down
+I [2015-10-18 17:01:50.168] [[32mDispatcher[0m] [36mName:[0m down
+I [2015-10-18 17:01:50.168] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::cb0e1b9ad02a73b255b0>
+I [2015-10-18 17:01:50.169] [[32mChannel[0m] [updates] "baixo"
+I [2015-10-18 17:01:50.169] [[32mDispatcher[0m] Event down Finished in 0.001259378 seconds
+I [2015-10-18 17:03:54.303] [[32mChannel[0m] #<Connection::cb0e1b9ad02a73b255b0> unsubscribed from channel updates
+I [2015-10-18 17:03:54.303] [[32mConnectionManager[0m] Connection closed: #<Connection::cb0e1b9ad02a73b255b0>
+I [2015-10-18 17:09:00.577] [[32mConnectionManager[0m] Connection opened: #<Connection::bb3886454b477fa4e833>
+I [2015-10-18 17:09:00.585] [[32mChannel[0m] #<Connection::bb3886454b477fa4e833> subscribed to channel updates
+I [2015-10-18 17:09:00.586] [[32mChannel[0m] sending token
+I [2015-10-18 17:10:10.607] [[32mChannel[0m] #<Connection::bb3886454b477fa4e833> unsubscribed from channel updates
+I [2015-10-18 17:10:10.611] [[32mConnectionManager[0m] Connection closed: #<Connection::bb3886454b477fa4e833>
+I [2015-10-18 17:10:10.614] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 17:10:10.615] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 17:10:10.616] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::bb3886454b477fa4e833>
+E [2015-10-18 17:10:10.735] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-18 17:10:10.736] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 17:10:10.737] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 17:10:10.737] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 17:10:10.738] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 17:10:10.738] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 17:10:10.739] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 17:10:10.739] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 17:10:10.740] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 17:10:10.741] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 17:10:10.742] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 17:10:10.742] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-18 17:11:17.378] [[32mConnectionManager[0m] Connection opened: #<Connection::fdf0b2662809abc619a1>
+I [2015-10-18 17:11:17.407] [[32mChannel[0m] #<Connection::fdf0b2662809abc619a1> subscribed to channel updates
+I [2015-10-18 17:11:17.407] [[32mChannel[0m] sending token
+I [2015-10-18 17:11:32.459] [[32mChannel[0m] #<Connection::fdf0b2662809abc619a1> unsubscribed from channel updates
+I [2015-10-18 17:11:32.460] [[32mConnectionManager[0m] Connection closed: #<Connection::fdf0b2662809abc619a1>
+I [2015-10-18 17:11:32.460] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-18 17:11:32.460] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-18 17:11:32.460] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::fdf0b2662809abc619a1>
+E [2015-10-18 17:11:32.477] [[31mDispatcher[0m] Errno::EIO: Input/output error @ io_write - <STDERR>
+E [2015-10-18 17:11:32.477] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:610:in `write'
+E [2015-10-18 17:11:32.489] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:610:in `warn'
+E [2015-10-18 17:11:32.489] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:610:in `rescue in write'
+E [2015-10-18 17:11:32.489] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:594:in `write'
+E [2015-10-18 17:11:32.489] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:378:in `add'
+E [2015-10-18 17:11:32.489] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/logger.rb:13:in `block (2 levels) in broadcast'
+E [2015-10-18 17:11:32.489] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:452:in `error'
+E [2015-10-18 17:11:32.489] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract_adapter.rb:460:in `translate_exception_class'
+E [2015-10-18 17:11:32.489] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract_adapter.rb:475:in `rescue in log'
+E [2015-10-18 17:11:32.489] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract_adapter.rb:473:in `log'
+E [2015-10-18 17:11:32.489] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/postgresql_adapter.rb:596:in `exec_no_cache'
+E [2015-10-18 17:11:32.490] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/postgresql_adapter.rb:588:in `execute_and_clear'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:160:in `exec_query'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract/database_statements.rb:351:in `select'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract/database_statements.rb:32:in `select_all'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract/query_cache.rb:68:in `block in select_all'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract/query_cache.rb:83:in `cache_sql'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract/query_cache.rb:68:in `select_all'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/querying.rb:39:in `find_by_sql'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation.rb:639:in `exec_queries'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation.rb:515:in `load'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation.rb:243:in `to_a'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation/finder_methods.rb:500:in `find_nth_with_limit'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation/finder_methods.rb:484:in `find_nth'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation/finder_methods.rb:127:in `first'
+E [2015-10-18 17:11:32.492] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/querying.rb:3:in `first'
+E [2015-10-18 17:11:32.493] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-18 17:11:32.493] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-18 17:11:32.493] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-18 17:11:32.493] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-18 17:11:32.493] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-18 17:11:32.494] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-18 17:11:32.494] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-18 17:11:32.494] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-18 17:11:32.494] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-18 17:11:32.494] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-18 17:11:32.494] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-20 14:41:55.959] [[32mConnectionManager[0m] Connection opened: #<Connection::e2823a154f95f62b19fd>
+I [2015-10-20 14:41:56.211] [[32mChannel[0m] #<Connection::e2823a154f95f62b19fd> subscribed to channel updates
+I [2015-10-20 14:41:56.213] [[32mChannel[0m] sending token
+I [2015-10-20 14:41:58.260] [[32mDispatcher[0m] Started Event: up
+I [2015-10-20 14:41:58.260] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-20 14:41:58.260] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e2823a154f95f62b19fd>
+I [2015-10-20 14:41:58.290] [[32mChannel[0m] [updates] "cima"
+I [2015-10-20 14:41:58.291] [[32mDispatcher[0m] Event up Finished in 0.030653758 seconds
+I [2015-10-20 14:41:59.541] [[32mDispatcher[0m] Started Event: left
+I [2015-10-20 14:41:59.541] [[32mDispatcher[0m] [36mName:[0m left
+I [2015-10-20 14:41:59.541] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e2823a154f95f62b19fd>
+I [2015-10-20 14:41:59.542] [[32mChannel[0m] [updates] "esquerda"
+I [2015-10-20 14:41:59.543] [[32mDispatcher[0m] Event left Finished in 0.001372661 seconds
+I [2015-10-20 14:42:00.120] [[32mDispatcher[0m] Started Event: right
+I [2015-10-20 14:42:00.120] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-20 14:42:00.120] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e2823a154f95f62b19fd>
+I [2015-10-20 14:42:00.121] [[32mChannel[0m] [updates] "direita"
+I [2015-10-20 14:42:00.122] [[32mDispatcher[0m] Event right Finished in 0.001069689 seconds
+I [2015-10-20 14:42:09.645] [[32mChannel[0m] #<Connection::e2823a154f95f62b19fd> unsubscribed from channel updates
+I [2015-10-20 14:42:09.645] [[32mConnectionManager[0m] Connection closed: #<Connection::e2823a154f95f62b19fd>
+I [2015-10-20 14:42:09.646] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-20 14:42:09.646] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-20 14:42:09.646] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::e2823a154f95f62b19fd>
+E [2015-10-20 14:42:09.664] [[31mDispatcher[0m] NoMethodError: undefined method `count' for nil:NilClass
+E [2015-10-20 14:42:09.664] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-20 14:42:09.664] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-20 14:42:09.664] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-20 14:42:09.664] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-20 14:42:09.664] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-20 14:42:09.664] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-20 14:42:09.664] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-20 14:42:09.665] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-20 14:42:09.665] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-20 14:42:09.665] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-20 14:42:09.665] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+
+I [2015-10-20 14:42:11.755] [[32mConnectionManager[0m] Connection opened: #<Connection::f7604770cf46f98c3c2c>
+I [2015-10-20 14:42:11.836] [[32mChannel[0m] #<Connection::f7604770cf46f98c3c2c> subscribed to channel updates
+I [2015-10-20 14:42:11.836] [[32mChannel[0m] sending token
+I [2015-10-20 14:42:36.909] [[32mDispatcher[0m] Started Event: up
+I [2015-10-20 14:42:36.910] [[32mDispatcher[0m] [36mName:[0m up
+I [2015-10-20 14:42:36.910] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::f7604770cf46f98c3c2c>
+I [2015-10-20 14:42:36.928] [[32mChannel[0m] [updates] "cima"
+I [2015-10-20 14:42:36.934] [[32mDispatcher[0m] Event up Finished in 0.002187918 seconds
+I [2015-10-20 14:42:36.905] [[32mDispatcher[0m] Started Event: right
+I [2015-10-20 14:42:36.905] [[32mDispatcher[0m] [36mName:[0m right
+I [2015-10-20 14:42:36.905] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::f7604770cf46f98c3c2c>
+I [2015-10-20 14:42:36.907] [[32mChannel[0m] [updates] "direita"
+I [2015-10-20 14:42:36.908] [[32mDispatcher[0m] Event right Finished in 0.002118216 seconds
+I [2015-10-20 14:42:37.471] [[32mDispatcher[0m] Started Event: left
+I [2015-10-20 14:42:37.471] [[32mDispatcher[0m] [36mName:[0m left
+I [2015-10-20 14:42:37.471] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::f7604770cf46f98c3c2c>
+I [2015-10-20 14:42:37.472] [[32mChannel[0m] [updates] "esquerda"
+I [2015-10-20 14:42:37.473] [[32mDispatcher[0m] Event left Finished in 0.001770896 seconds
+I [2015-10-20 14:42:38.261] [[32mDispatcher[0m] Started Event: down
+I [2015-10-20 14:42:38.261] [[32mDispatcher[0m] [36mName:[0m down
+I [2015-10-20 14:42:38.261] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::f7604770cf46f98c3c2c>
+I [2015-10-20 14:42:38.263] [[32mChannel[0m] [updates] "baixo"
+I [2015-10-20 14:42:38.263] [[32mDispatcher[0m] Event down Finished in 0.001853239 seconds
+I [2015-10-20 16:31:57.490] [[32mChannel[0m] #<Connection::f7604770cf46f98c3c2c> unsubscribed from channel updates
+I [2015-10-20 16:31:57.490] [[32mConnectionManager[0m] Connection closed: #<Connection::f7604770cf46f98c3c2c>
+I [2015-10-20 16:31:57.490] [[32mDispatcher[0m] Started Event: client_disconnected
+I [2015-10-20 16:31:57.490] [[32mDispatcher[0m] [36mName:[0m client_disconnected
+I [2015-10-20 16:31:57.490] [[32mDispatcher[0m] [36mConnection:[0m #<Connection::f7604770cf46f98c3c2c>
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] Errno::EIO: Input/output error @ io_write - <STDERR>
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:610:in `write'
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:610:in `warn'
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:610:in `rescue in write'
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:594:in `write'
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:378:in `add'
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/logger.rb:13:in `block (2 levels) in broadcast'
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb:452:in `error'
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract_adapter.rb:460:in `translate_exception_class'
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract_adapter.rb:475:in `rescue in log'
+E [2015-10-20 16:31:57.497] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract_adapter.rb:473:in `log'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/postgresql_adapter.rb:596:in `exec_no_cache'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/postgresql_adapter.rb:588:in `execute_and_clear'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:160:in `exec_query'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract/database_statements.rb:351:in `select'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract/database_statements.rb:32:in `select_all'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract/query_cache.rb:68:in `block in select_all'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract/query_cache.rb:83:in `cache_sql'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/connection_adapters/abstract/query_cache.rb:68:in `select_all'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/querying.rb:39:in `find_by_sql'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation.rb:639:in `exec_queries'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation.rb:515:in `load'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation.rb:243:in `to_a'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation/finder_methods.rb:500:in `find_nth_with_limit'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation/finder_methods.rb:484:in `find_nth'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/relation/finder_methods.rb:127:in `first'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activerecord-4.2.4/lib/active_record/querying.rb:3:in `first'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/Documentos/Projetos/Rails/IFF/tcc/tcc-portal/app/controllers/arduino_controller.rb:24:in `goodbye'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/base_controller.rb:27:in `process_action'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+E [2015-10-20 16:31:57.498] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+E [2015-10-20 16:31:57.499] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:65:in `block (3 levels) in route'
+E [2015-10-20 16:31:57.499] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `call'
+E [2015-10-20 16:31:57.499] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/logging.rb:66:in `log_event'
+E [2015-10-20 16:31:57.499] [[31mDispatcher[0m] /home/jrodolfo/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/websocket-rails-0.7.0/lib/websocket_rails/dispatcher.rb:62:in `block (2 levels) in route'
+

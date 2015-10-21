@@ -7,15 +7,28 @@ class RegistrationCoursesController < ApplicationController
   def index
     if current_user != nil && current_user.role == 'aluno'
       @registration_courses = RegistrationCourse.all.where(aluno_id: current_user.id).order(:curso_id)
+    elsif current_user != nil && (current_user.role == 'professor' || current_user.role == 'coordenador')
+      @registration_courses = RegistrationCourse.joins(:curso => :disciplines).all.where("disciplines.professor_id = ?", current_user.id).order(:curso_id).group("registration_courses.id, registration_courses.curso_id")
     else
       @registration_courses = RegistrationCourse.all.order(:curso_id)
     end
+
+    authorize @registration_courses
     #puts Time.now.strftime("%m-%d-%Y %H:%M:%S")
   end
 
   # GET /registration_courses/1
   # GET /registration_courses/1.json
   def show
+    authorize @registration_course
+
+    if current_user != nil && current_user.role == 'aluno'
+      @registration_course = RegistrationCourse.find(params[:id])
+    elsif current_user != nil && (current_user.role == 'professor' || current_user.role == 'coordenador')
+      @registration_courses = Discipline.all.where(professor_id: current_user.id).order(:name)
+    else
+      #@registration_course = RegistrationCourse.all.order(:curso_id)
+    end
   end
 
   # GET /registration_courses/new

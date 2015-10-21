@@ -1,9 +1,11 @@
 class RegistrationCoursePolicy < ApplicationPolicy
 
   def index?
+    !user.nil? and (user.aluno? or user.professor? or user.coordenador? or user.administrador?)
   end
 
   def show?
+    !user.nil? and (user.aluno? or user.professor? or user.coordenador? or user.administrador?)
   end
 
   def new?

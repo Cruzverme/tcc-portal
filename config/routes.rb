@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  #get 'arduino_clients/index'
+
+  #get 'arduino_clients/show'
+
+  #get 'arduino_clients/edit'
+
+  #get 'arduino_clients/update'
+
+  #get 'arduino_clients/destoy'
+
+  resources :arduino_clients
   resources :registration_courses
   resources :disciplines
   devise_for :users, :controllers => { :registrations => :registrations }

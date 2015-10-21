@@ -24,11 +24,6 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     authorize @user
-
-    roles = ['coordenador', 'administrador']
-    if current_user.role == 'coordenador' && roles.include?(@user.role)
-      redirect_to :back
-    end
   end
 
   # POST /users
