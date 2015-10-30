@@ -1,2 +1,0 @@
-      invoke  active_record
-      create    db/migrate/20151015165629_add_role_to_users.rb
