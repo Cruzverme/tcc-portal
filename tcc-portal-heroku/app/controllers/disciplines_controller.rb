@@ -11,6 +11,7 @@ class DisciplinesController < ApplicationController
   # GET /disciplines/1
   # GET /disciplines/1.json
   def show
+    @cameras = Camera.all
   end
 
   # GET /disciplines/new

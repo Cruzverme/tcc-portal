@@ -3,6 +3,7 @@
 <li><%= link_to 'Disciplinas', disciplines_path %></li>
 <li><%= link_to 'Usuarios', users_path %></li>
 <li><%= link_to 'Meus Cursos', registration_courses_path %></li>
+<li><%= link_to 'Cameras', cameras_path %></li> <!-- adicionar para o coordenador cadastrar depois e adm tbn -->
 <% if user_signed_in? %>
   <li><%= link_to 'Editar perfil', edit_user_path(current_user) %></li>
   <li><%= link_to 'Editar conta', edit_user_registration_path %></li>

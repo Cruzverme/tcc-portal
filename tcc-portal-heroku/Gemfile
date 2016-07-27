@@ -16,6 +16,7 @@ gem 'bootstrap-sass'
 gem 'rails_layout'
 # fim layout
 
+gem 'streamio-ffmpeg' #conversão dos videos
 gem 'rqrcode'
 
 # Use SCSS for stylesheets

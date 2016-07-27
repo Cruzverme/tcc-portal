@@ -1,0 +1,29 @@
+<table>
+  <thead>
+    <tr>
+      <th>Ip video</th>
+      <th>Ip audio</th>
+      <th>Disponivel</th>
+      <th>Sala</th>
+      <th>Horario disponivel inicial</th>
+      <th>Horario disponivel final</th>
+      <th>Curso</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cameras.each do |camera| %>
+      <tr>
+        <td><%= camera.ip_video %></td>
+        <td><%= camera.ip_audio %></td>
+        <td><%= camera.disponivel %></td>
+        <td><%= camera.sala %></td>
+        <td><%= camera.horario_disponivel_inicial %></td>
+        <td><%= camera.horario_disponivel_final %></td>
+        <td><%= camera.curso.nome %></td>
+        <td><%= link_to 'Filmar', camera_record_path(camera) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

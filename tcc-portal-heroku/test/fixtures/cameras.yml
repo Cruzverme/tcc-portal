@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ip_video: MyString
+  ip_audio: MyString
+  disponivel: false
+  sala: MyString
+  horario_disponivel_inicial: 2016-07-26 20:45:58
+  horario_disponivel_final: 2016-07-26 20:45:58
+  curso_id: 
+  user_id: 
+
+two:
+  ip_video: MyString
+  ip_audio: MyString
+  disponivel: false
+  sala: MyString
+  horario_disponivel_inicial: 2016-07-26 20:45:58
+  horario_disponivel_final: 2016-07-26 20:45:58
+  curso_id: 
+  user_id: 

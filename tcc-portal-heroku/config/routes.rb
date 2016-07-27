@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cameras
   #get 'arduino_clients/index'
 
   #get 'arduino_clients/show'
@@ -17,6 +18,12 @@ Rails.application.routes.draw do
   resources :cursos
 
   root to: 'welcome#index'
+
+  scope "/cameras/:id/" do
+    get "camera_record", to: "cameras#record", as: :camera_record
+    get "camera_record_start", to: "cameras#record_start", as: :camera_record_start
+    get "camera_record_stop", to: "cameras#record_stop", as: :camera_record_stop
+  end
 
   resources :disciplines do
     get :arduino
