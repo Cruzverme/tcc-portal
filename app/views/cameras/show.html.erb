@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip video:</strong>
+  <%= @camera.ip_video %>
+</p>
+
+<p>
+  <strong>Ip audio:</strong>
+  <%= @camera.ip_audio %>
+</p>
+
+<p>
+  <strong>Disponivel:</strong>
+  <%= @camera.disponivel %>
+</p>
+
+<p>
+  <strong>Sala:</strong>
+  <%= @camera.sala %>
+</p>
+
+<p>
+  <strong>Horario disponivel inicial:</strong>
+  <%= @camera.horario_disponivel_inicial %>
+</p>
+
+<p>
+  <strong>Horario disponivel final:</strong>
+  <%= @camera.horario_disponivel_final %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @camera.curso %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @camera.user %>
+</p>
+
+<%= link_to 'Edit', edit_camera_path(@camera) %> |
+<%= link_to 'Back', cameras_path %>

@@ -14,3 +14,7 @@ Projeto final de conclusão de curso, portal para professores e alunos.
 ******* Usando WebSocket *******
   - https://github.com/websocket-rails/websocket-rails
   - http://websocket-rails.github.io/
+
+******* Instale PgAdmin ********
+  - sudo apt-get install postgresql
+  - sudo apt-get install postgresql-client libpq5 libpq-dev

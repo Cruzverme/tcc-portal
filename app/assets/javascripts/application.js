@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require websocket_rails/main
+//= require video
 //= require_tree .

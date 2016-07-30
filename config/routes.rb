@@ -15,8 +15,15 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => :registrations }
   resources :users, except: [:create]
   resources :cursos
+  resources :cameras
 
   root to: 'welcome#index'
+
+  scope "/cameras/:id/" do
+    get "camera_record", to: "cameras#record", as: :camera_record
+    get "camera_record_start", to: "cameras#record_start", as: :camera_record_start
+    get "camera_record_stop", to: "cameras#record_stop", as: :camera_record_stop
+  end
 
   resources :disciplines do
     get :arduino
@@ -31,6 +38,7 @@ Rails.application.routes.draw do
   get 'welcome/edit'
 
   get 'welcome/show'
+
 
 # Name it however you want
   post 'create_user' => 'users#create', as: :create_user
