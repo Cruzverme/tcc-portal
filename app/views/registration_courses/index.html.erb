@@ -1,8 +1,0 @@
-<h1>Listing Registration Courses</h1>
-
-<% if current_user.role == 'aluno' %>
-  <%= render 'aluno' %>
-<% elsif current_user.role == 'professor' %>
-  <%= render 'professor' %>
-<% else %>
-<% end %>
