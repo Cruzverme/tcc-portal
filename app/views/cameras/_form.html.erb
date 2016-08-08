@@ -1,0 +1,45 @@
+<%= form_for(@camera) do |f| %>
+  <% if @camera.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@camera.errors.count, "error") %> prohibited this camera from being saved:</h2>
+
+      <ul>
+      <% @camera.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ip_video %><br>
+    <%= f.text_field :ip_video %>
+  </div>
+  <div class="field">
+    <%= f.label :ip_audio %><br>
+    <%= f.text_field :ip_audio %>
+  </div>
+  <div class="field">
+    <%= f.label :disponivel %><br>
+    <%= f.check_box :disponivel %>
+  </div>
+  <div class="field">
+    <%= f.label :sala %><br>
+    <%= f.text_field :sala %>
+  </div>
+  <div class="field">
+    <%= f.label :horario_disponivel_inicial %><br>
+    <%= f.datetime_select :horario_disponivel_inicial %>
+  </div>
+  <div class="field">
+    <%= f.label :horario_disponivel_final %><br>
+    <%= f.datetime_select :horario_disponivel_final %>
+  </div>
+  <div class="field">
+    <%= f.label :curso_id %><br>
+    <%= f.select :curso_id, Curso.all.collect {|c| [ c.nome, c.id ] }%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

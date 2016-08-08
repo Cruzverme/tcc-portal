@@ -1,0 +1,27 @@
+<p>
+  <strong>Admission date:</strong>
+  <%= @registration_course.admission_date %>
+</p>
+
+<p>
+  <strong>Locked:</strong>
+  <%= @registration_course.locked %>
+</p>
+
+<p>
+  <strong>Conclusion date:</strong>
+  <%= @registration_course.conclusion_date %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @registration_course.curso.nome %>
+</p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @registration_course.aluno.nome %>
+</p>
+
+<%= link_to 'Edit', edit_registration_course_path(@registration_course) %> |
+<%= link_to 'Back', registration_courses_path %>
